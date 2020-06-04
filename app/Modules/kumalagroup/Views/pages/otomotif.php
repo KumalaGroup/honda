@@ -16,202 +16,72 @@
              <div class="row">
                  <div class="col-md-2 text-center shadow p-3 mb-5 bg-white">
                      <h6>Pilih Warna</h6>
-                     <?php $gambar = [$data->gambar2, $data->gambar3, $data->gambar4, $data->gambar5, $data->gambar6, $data->gambar7];
-                        foreach ($gambar as $i => $v) :
+                     <?php foreach ($warna as $v) :
                             if ($v) : ?>
-                             <img class="side" onmouseover="mOver('<?= $base_img . '/automotif/' . $v ?>')" style="margin-top: 10px;" src="<?= "$base_img/automotif/$v" ?>" alt="" data-animate="fadeInRight" width="100px" height="50px"> </br>
+                             <img class="side" onmouseover="mOver('<?= $base_img . '/otomotif/warna/' . $v->gambar ?>')" style="margin-top: 10px;" src="<?= "$base_img/otomotif/warna/$v->gambar" ?>" alt="" data-animate="fadeInRight" width="100px" height="50px"> </br>
                      <?php endif;
                         endforeach ?>
                  </div>
                  <div class="col-md-7 shadow p-3 mb-5 bg-white">
-                     <img id="main-color" src="<?= "$base_img/automotif/$data->gambar" ?>" style="width: 100%;" alt="" data-animate="fadeInRight">
+                     <img id="main-color" src="<?= "$base_img/otomotif/$otomotif->gambar" ?>" style="width: 100%;" alt="" data-animate="fadeInRight">
                  </div>
                  <div class="col-md-3 shadow p-3 mb-5 bg-white">
                      <h4><?= $data->nama ?></h4>
                      <!-- Download Brosue -->
-                     <a href="{{asset('storage/pdf/brocure'.$data->brocure)}}" class="btn btn-xl btn-outline-danger" style="border-color:#FA0F0c; font-weight: 500;">
-                         Download Brosur
-                     </a>
-                     <br><br>
+                     <a download href="<?= "$base_img/otomotif/brosur/$otomotif->brosur" ?>" class="btn btn-xl btn-outline-danger btn-block" style="border-color:#FA0F0c; font-weight: 500;">Download Brosur</a>
+                     <br>
                      <!-- test drive -->
-                     <button type="button" class="btn btn-xl btn-outline-danger" style="border-color:#FA0F0c;font-weight: 500;padding-left: 72px;padding-right: 58px;" data-toggle="modal" data-target="#testdr">
-                         Test Drive
-                     </button>
+                     <button type="button" class="btn btn-xl btn-outline-danger btn-block" style="border-color:#FA0F0c;font-weight: 500;padding-left: 72px;padding-right: 58px;" data-toggle="modal" data-target="#testdr">Layanan</button>
                      <!-- Modal -->
                      <div class="modal fade" id="testdr" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
                          <div class="modal-dialog" role="document">
                              <div class="modal-content">
                                  <div class="modal-header">
-                                     <h4 class="modal-title" id="myModalLabel">Layanan Test Drive</h4>
+                                     <h4 class="modal-title" id="myModalLabel">Layanan</h4>
                                      <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
                                  </div>
                                  <div class="modal-body">
-                                     <form action="{{route('uji')}}" method="POST">
-                                         @csrf
-                                         <div class="form-group">
-                                             <label for="namalengkap">Nama: </label>
-                                             <input type="text" name="nama" class="form-control" id="namalengkap" placeholder="Nama Lengkap anda">
-                                         </div>
-                                         <div class="form-group">
-                                             <label for="email">Email :</label>
-                                             <input type="email" name="email" class="form-control" id="email" placeholder="Email anda">
-                                         </div>
-                                         <div class="form-group">
-                                             <label for="nohp">No Telepon: </label>
-                                             <input name="hp" type="text" class="form-control" id="nohp" placeholder="No Telepon anda">
-                                         </div>
-                                         <div class="form-group">
-                                             <label for="nohp">Dealer: </label>
-                                             <input name="dealer" type="text" class="form-control" id="nohp" placeholder="Dealer">
-                                         </div>
-                                         <div class="form-group">
-                                             <label for="exampleFormControlSelect1">Jenis Kelamin</label>
-                                             <select name="jk" class="form-control" id="exampleFormControlSelect1">
-                                                 <option value="laki-laki">Laki-laki</option>
-                                                 <option value="perempuan">Perempuan</option>
-                                             </select>
-                                         </div>
-                                         <div class="form-group">
-                                             <label for="alamat">Alamat anda : </label>
-                                             <input type="text" name="alamat" class="form-control" id="alamat" placeholder="alamat anda">
-                                         </div>
-                                         <div class="form-group">
-                                             <label for="asal">Asal Kota: </label>
-                                             <input name="kota" type="text" class="form-control" id="asal" placeholder="Asal Kota anda">
-                                         </div>
-                                         <div class="form-group">
-                                             <label for="daerah">Daerah di kota anda: </label>
-                                             <input name="daerah" type="text" class="form-control" id="daerah" placeholder="daerah di kota anda">
-                                         </div>
-                                         <button type="submit" class="btn btn-danger">Kirim</button>
-                                     </form>
-                                 </div>
-                             </div>
-                         </div>
-                     </div>
-                     <br><br>
-
-                     <!-- Penawaran terbaik -->
-                     <button type="button" class="btn btn-xl btn-outline-danger" style="border-color:#FA0F0c;font-weight: 500;padding-left: 40px;padding-right: 35px;" data-toggle="modal" data-target="#exampleModa2">
-                         Cek Penawaran
-                     </button>
-
-                     <!-- Modal -->
-                     <div class="modal fade" id="exampleModa2" tabindex="-1" role="dialog" aria-labelledby="exampleModa2Label" aria-hidden="true">
-                         <div class="modal-dialog" role="document">
-                             <div class="modal-content">
-                                 <div class="modal-header">
-                                     <h4 class="modal-title" id="myModalLabel">Dapatkan Penawaran Terbaik</h4>
-                                     <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
-                                 </div>
-                                 <div class="modal-body">
-                                     <form action="{{route('nawar')}}" method="post">
-                                         @csrf
+                                     <form id="form">
                                          <div class="form-group">
                                              <label for="nama">Nama: </label>
-                                             <input name="nama" type="text" class="form-control" id="nama" placeholder="Nama Lengkap anda">
+                                             <input type="text" name="nama" class="form-control" id="nama" placeholder="Nama Lengkap anda" required>
                                          </div>
                                          <div class="form-group">
-                                             <label for="email">Email:</label>
-                                             <input name="email" type="text" class="form-control" id="email" placeholder="Email anda">
+                                             <label for="telepon">No Telepon: </label>
+                                             <input name="telepon" type="text" class="form-control" id="telepon" placeholder="No Telepon anda" required>
                                          </div>
                                          <div class="form-group">
-                                             <label for="nohp">No Telepon: </label>
-                                             <input name="hp" type="text" class="form-control" id="nohp" placeholder="No Telepon anda">
-                                         </div>
-                                         <div class="form-group">
-                                             <label for="usia"> Usia: </label>
-                                             <input name="usia" type="text" class="form-control" id="usia" placeholder="Usia anda">
-                                         </div>
-                                         <div class="form-group">
-                                             <label for="kota"> Asal Kota: </label>
-                                             <input name="kota" type="text" class="form-control" id="kota" placeholder="Asal kota anda">
-                                         </div>
-                                         <div class="form-group">
-                                             <label for="statustempattinggal"> Status tempat tinggal: </label>
-                                             <select name="status" class="form-control" id="statustempattinggal">
-                                                 <option value="0">--Pilih disini--</option>
-                                                 <option value="rumah sendiri">Rumah sendiri</option>
-                                                 <option value="rumah orang tua">Rumah orang tua</option>
-                                                 <option value="sewa kontrak">Sewa/Kontrak</option>
-                                                 <option value="lainnya">Lainnya</option>
+                                             <label for="dealer">Dealer: </label>
+                                             <select id="dealer" name="dealer" class="form-control" required>
+                                                 <option value="" selected disabled>-- Silahkan Pilih Dealer --</option>
+                                                 <?php foreach ($dealer as $v) : ?>
+                                                     <option value="<?= $v->id ?>"><?= ucwords($v->judul) ?></option>
+                                                 <?php endforeach ?>
                                              </select>
                                          </div>
                                          <div class="form-group">
-                                             <label for="pekerjaan">Pekerjaan:</label>
-                                             <select name="pekerjaan" class="form-control" id="pekerjaan">
-                                                 <option value="0">--Pilih disini--</option>
-                                                 <option value="PNS/POLRI/TNI/BUMN">PNS/POLRI/TNI/BUMN</option>
-                                                 <option value="Wiraswasta/Pengusaha">Wiraswasta/Pengusaha</option>
-                                                 <option value="Pegawai Swasta">Pegawai Swasta</option>
-                                                 <option value="Proffesional/Pengacara/Praktisi Hukum">Proffesional/Pengacara/Praktisi Hukum</option>
-                                                 <option value="lainnya">Lainnya</option>
-                                             </select>
+                                             <label for="kota">Asal Kota: </label>
+                                             <input name="kota" type="text" class="form-control" id="kota" placeholder="Asal Kota anda" required>
                                          </div>
                                          <div class="form-group">
-                                             <label for="exampleFormControlSelect1">Lama bekerja:</label>
-                                             <select name="lama" class="form-control" id="exampleFormControlSelect1">
-                                                 <option value="0">--Pilih disini--</option>
-                                                 <option value="< 6 bulan">
-                                                     < 6 bulan </option> <option value="6 bulan - 1 tahun">6 bulan - 1 tahun
-                                                 </option>
-                                                 <option value="1 - 3 tahun">1 - 3 tahun</option>
-                                                 <option value="> 3 tahun"> > 3 tahun</option>
-                                                 <option value="lainnya">Lainnya</option>
-                                             </select>
-                                         </div>
-                                         <div class="form-group">
-                                             <label for="kisaran">Kisaran Harga Mobil yang diminati:</label>
-                                             <select name="kisaran" class="form-control" id="kisaran">
-                                                 <option value="0">--Pilih disini--</option>
-                                                 <option value="100.000.000 – 150.000.000">100.000.000 – 150.000.000</option>
-                                                 <option value="150.000.000 – 250.000.000">150.000.000 – 250.000.000</option>
-                                                 <option value="250.000.000 – 350.000.000">250.000.000 – 350.000.000</option>
-                                                 <option value="350.000.000 – 450.000.000">350.000.000 – 450.000.000</option>
-                                                 <option value="> 450.000.000"> > 450.000.000</option>
-                                                 <option value="lainnya">lainnya</option>
-                                             </select>
-                                         </div>
-                                         <div class="form-group">
-                                             <label for="segmen">Segment Mobil yang diminati:</label>
-                                             <select name="segmen" class="form-control" id="segmen">
-                                                 <option value="0">--Pilih disini--</option>
-                                                 <option value="LGCC">LGCC</option>
-                                                 <option value="City Car">City Car</option>
-                                                 <option value="MPV">MPV</option>
-                                                 <option value="SUV">SUV</option>
-                                                 <option value="Roadster">Roadster</option>
-                                                 <option value="Crossover">Crossover</option>
-                                                 <option value="Sedan">Sedan</option>
-                                                 <option value="Estate">Estate</option>
-                                             </select>
-                                         </div>
-                                         <div class="form-group">
-                                             <label for="rencana">Rencana waktu untuk pembelian mobil:</label>
-                                             <select name="rencana" class="form-control" id="rencana">
-                                                 <option value="0">--Pilih disini--</option>
-                                                 <option value="Bulan ini">Bulan ini</option>
-                                                 <option value="1-2 bulan">1-2 bulan</option>
-                                                 <option value="> 3 bulan">> 3 bulan</option>
-                                                 <option value="Lainnya">Lainnya</option>
-                                             </select>
-                                         </div>
-                                         <div class="form-group">
-                                             <label for="info">Informasi yang dibutuhkan:</label>
-                                             <select name="informasi" class="form-control" id="info">
-                                                 <option value="0">--Pilih disini--</option>
-                                                 <option value="Informasi Promo">Informasi Promo</option>
+                                             <label for="layanan">Jenis Layanan: </label>
+                                             <select id="layanan" name="layanan" class="form-control" required>
+                                                 <option value="" selected disabled>-- Silahkan Pilih Layanan --</option>
                                                  <option value="Test Drive">Test Drive</option>
-                                                 <option value="Informasi Dealer Terdekat">Informasi Dealer Terdekat</option>
-                                                 <option value="Lainnya">Lainnya</option>
+                                                 <option value="Penawaran">Penawaran</option>
                                              </select>
                                          </div>
-                                         <button type="submit" class="btn btn-danger">Minta Penawaran</button>
+                                         <div class="form-group" style="display: none;">
+                                             <label for="nama">Tanggal Test Drive: </label>
+                                             <input type="text" name="tanggal" class="form-control" id="tanggal" placeholder="Masukkan tanggal Test Drive" autocomplete="off" required>
+                                         </div>
+                                         <button id="submit" class="btn btn-danger">Kirim</button>
                                      </form>
                                  </div>
                              </div>
                          </div>
                      </div>
+                     <br>
                  </div>
              </div>
 
@@ -226,53 +96,67 @@
 
              <div class="row">
                  <div class="col-md-12">
-                     <h4>Tentang <?= $data->nama ?></h4>
+                     <h4>Tentang <?= $otomotif->model ?></h4>
                      <br>
-                     <p><?= $data->deskripsi ?></p>
+                     <p><?= $otomotif->deskripsi ?></p>
 
                  </div>
              </div>
 
              <br><br>
-             <h4>Fitur <?= $data->nama ?></h4>
-             <?php $gambar = [$data->fg, $data->fg2, $data->fg3, $data->fg4, $data->fg5, $data->fg6, $data->fg7, $data->fg8, $data->fg9, $data->fg10, $data->fg11, $data->fg12, $data->fg13, $data->fg14, $data->fg15];
-                $title = [$data->ft, $data->ft2, $data->ft3, $data->ft4, $data->ft5, $data->ft6, $data->ft7, $data->ft8, $data->ft9, $data->ft10, $data->ft11, $data->ft12, $data->ft13, $data->ft14, $data->ft15];
-                $deskripsi = [$data->fd, $data->fd2, $data->fd3, $data->fd4, $data->fd5, $data->fd6, $data->fd7, $data->fd8, $data->fd9, $data->fd10, $data->fd11, $data->fd12, $data->fd13, $data->fd14, $data->fd15];
-                foreach ($gambar as $i => $v) :
+             <h4>Fitur <?= $otomotif->model ?></h4>
+             <br>
+             <?php foreach ($detail as $i => $v) :
                     if ($v) :
                         if ($i % 2) : ?>
                          <div class="row">
                              <div class="col-md-8">
                                  <br>
-                                 <h5><?= $title[$i] ?></h5>
+                                 <h5><?= $v->nama_detail ?></h5>
                                  <br>
-                                 <p><?= $deskripsi[$i] ?>.</p>
+                                 <p><?= $v->deskripsi ?>.</p>
                              </div>
                              <div class="col-md-4">
-                                 <img src="<?= "$base_img/automotif/$v" ?>" width="350" height="250" alt="">
+                                 <img src="<?= "$base_img/otomotif/detail/$v->gambar" ?>" width="350" height="250" alt="">
                              </div>
                          </div>
                      <?php else : ?>
                          <div class="row">
                              <div class="col-md-4">
-                                 <img src="<?= "$base_img/automotif/$v" ?>" width="350" height="250" alt="">
+                                 <img src="<?= "$base_img/otomotif/detail/$v->gambar" ?>" width="350" height="250" alt="">
                              </div>
                              <div class="col-md-8">
                                  <br>
-                                 <h5><?= $title[$i] ?></h5>
+                                 <h5><?= $v->nama_detail  ?></h5>
                                  <br>
-                                 <p><?= $deskripsi[$i] ?>.</p>
+                                 <p><?= $v->deskripsi ?>.</p>
                              </div>
                          </div>
              <?php endif;
                     endif;
                 endforeach ?>
              <br>
-
          </div>
      </section>
 
      <script>
+         $('#layanan').change(function() {
+             if ($(this).val() == "Test Drive") $('#form').find('.form-group').eq(5).removeAttr('style');
+             else $('#form').find('.form-group').eq(5).css('display', 'none');
+         });
+         $('#tanggal').datepicker({
+             'format': 'dd-mm-yyyy'
+         });
+         $('#submit').click(function(e) {
+             e.preventDefault();
+             var data = $('#form').serialize();
+             if ($('#form').valid()) $.post("<?= base_url("otomotif") ?>", data, function(r) {
+                 if (r == 1) swal("", "Data berhasil disimpan!", "success").then(function() {
+                     location.reload();
+                 });
+             });
+         });
+
          function mOver(src) {
              var a = document.getElementById("main-color");
              a.src = src;
@@ -361,10 +245,10 @@
              <div class="row text-center">
                  <?php foreach ($otomotif as $i => $v) : ?>
                      <div class="col-md-4 shadow p-3 mb-5 bg-white">
-                         <h4><?= $v->nama ?></h4>
-                         <img src="<?= "$base_img/automotif/$v->gambar" ?>" width="350px" height="200px" alt="">
+                         <h4><?= $v->model ?></h4>
+                         <img src="<?= "$base_img/otomotif/$v->gambar" ?>" width="350px" height="200px" alt="">
                          <br>
-                         <h6 class="text-center" style="margin-top:10px;">Mulai Dari Rp. <?= number_format($v->price, 0, '', '.') ?></h6>
+                         <h6 class="text-center" style="margin-top:10px;">Mulai Dari Rp. <?= number_format($v->harga, 0, '', '.') ?></h6>
                          <br>
                          <a class="btn btn-l btn-outline-primary text-center" href="<?= base_url("detail/$v->id") ?>">
                              Explore
@@ -377,13 +261,13 @@
                      <nav aria-label="Page-link navigation example">
                          <ul class="pagination justify-content-center">
                              <li class="page-item">
-                                 <a class="page-link" <?= ($page != 1) ? 'href="' . base_url() . '/page/' . ($page - 1) . '"' : '' ?>>‹</a>
+                                 <a class="page-link" <?= ($page != 1) ? 'href="' . base_url() . '/otomotif/honda/page/' . ($page - 1) . '"' : '' ?>>‹</a>
                              </li>
                              <?php for ($i = 1; $i <= $pages; $i++) : ?>
-                                 <li class="page-item <?= ($i == $page) ? 'active' : '' ?>"><a class="page-link" <?= ($i != $page) ? 'href="' . base_url() . '/page/' . $i . '"' : '' ?>><?= $i ?></a></li>
+                                 <li class="page-item <?= ($i == $page) ? 'active' : '' ?>"><a class="page-link" <?= ($i != $page) ? 'href="' . base_url() . '/otomotif/honda/page/' . $i . '"' : '' ?>><?= $i ?></a></li>
                              <?php endfor ?>
                              <li class="page-item">
-                                 <a class="page-link" <?= ($page != $pages) ? 'href="' . base_url() . '/page/' . ($page + 1) . '"' : '' ?>>›</a>
+                                 <a class="page-link" <?= ($page != $pages) ? 'href="' . base_url() . '/otomotif/honda/page/' . ($page + 1) . '"' : '' ?>>›</a>
                              </li>
                          </ul>
                      </nav>
