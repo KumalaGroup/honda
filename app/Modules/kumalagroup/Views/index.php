@@ -225,12 +225,20 @@
     }
 
     /* begin:: floating bottom */
+    #toppp {
+        position: fixed;
+        width: 60px;
+        height: 60px;
+        bottom: 170px;
+        right: 20px;
+    }
+
     .float {
         position: fixed;
         width: 60px;
         height: 60px;
-        bottom: 78px;
-        right: 15px;
+        bottom: 95px;
+        right: 20px;
         background-color: #0C9;
         color: #FFF;
         border-radius: 50px;
@@ -247,7 +255,6 @@
         padding-top: 5px;
         color: red;
     }
-
 
     /* end:: floating bottom */
 </style>
