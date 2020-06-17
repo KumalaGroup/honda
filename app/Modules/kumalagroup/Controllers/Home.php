@@ -7,7 +7,6 @@ use CodeIgniter\Controller;
 class Home extends Controller
 {
 	private $url = [
-		"http://localhost:6424/kmg/",
 		"http://portal.kumalagroup.co.id/kmg/",
 		"http://portal2.kumalagroup.co.id/kmg/",
 		"http://portal3.kumalagroup.co.id/kmg/"
