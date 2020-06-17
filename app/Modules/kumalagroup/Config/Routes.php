@@ -6,3 +6,4 @@ $routes->get('kontak', "$base\Home::kontak");
 
 $routes->post('dealer', "$base\Home::dealer");
 $routes->post('kontak', "$base\Home::kontak");
+$routes->post('simulasi_kredit', "$base\Home::simulasi_kredit");
