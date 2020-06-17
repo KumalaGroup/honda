@@ -35,10 +35,13 @@ class Home extends Controller
 		$d['content'] =  "$base\pages\otomotif";
 		$data = json_decode($this->curl_get($this->api_server . 'otomotif/honda'));
 		$d['head'] = $data->head;
-		$d['page'] = ($request->uri->getSegments()[0] == "page") ? $request->uri->getSegments()[1] : 1;
-		$start = ($d['page'] * 9) - 9;
-		$d['pages'] = ceil(count($data->otomotif) / 9);
-		$d['otomotif'] =  array_slice($data->otomotif, $start, 9);
+		$d['otomotif'] = [];
+		if ($data->otomotif) {
+			$d['page'] = ($request->uri->getSegments()[0] == "page") ? $request->uri->getSegments()[1] : 1;
+			$start = ($d['page'] * 9) - 9;
+			$d['pages'] = ceil(count($data->otomotif) / 9);
+			$d['otomotif'] =  array_slice($data->otomotif, $start, 9);
+		}
 		$d['base_img'] = $this->base_img;
 		echo view("$base\index", $d);
 	}
