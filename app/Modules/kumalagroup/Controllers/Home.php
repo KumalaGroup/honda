@@ -6,46 +6,68 @@ use CodeIgniter\Controller;
 
 class Home extends Controller
 {
-	private $api_server = "http://localhost:6424/kmg/";
+	private $url = [
+		"http://localhost:6424/kmg/",
+		"http://portal.kumalagroup.co.id/kmg/",
+		"http://portal2.kumalagroup.co.id/kmg/",
+		"http://portal3.kumalagroup.co.id/kmg/"
+	];
+	private $base_img;
+	private $api_server;
+	function _set_base($url)
+	{
+		foreach ($url as $i => $v) {
+			$headers = @get_headers($v);
+			$r = $headers && strpos($headers[0], '200') ? 1 : 0;
+			if ($r == 1) {
+				$this->api_server = $v . "api/tHLxW586aIi1YXsQeEKBwhPOJzqfjFokybGmCgRN0M4cnlvduTrVAU2pZS9D37/";
+				$this->base_img = $v . "assets/img_marketing";
+				break;
+			}
+		}
+	}
 	public function index()
 	{
+		$this->_set_base($this->url);
 		$request = \Config\Services::request();
 		$base = "App\Modules\kumalagroup\Views";
-		$d['index'] = "unit_bisnis";
+		$d['index'] = "prosuk";
 		$d['content'] =  "$base\pages\otomotif";
-		$data = json_decode($this->curl_get($this->api_server . 'api/kmg/otomotif/honda'));
+		$data = json_decode($this->curl_get($this->api_server . 'otomotif/honda'));
 		$d['head'] = $data->head;
 		$d['page'] = ($request->uri->getSegments()[0] == "page") ? $request->uri->getSegments()[1] : 1;
 		$start = ($d['page'] * 9) - 9;
 		$d['pages'] = ceil(count($data->otomotif) / 9);
 		$d['otomotif'] =  array_slice($data->otomotif, $start, 9);
-		$d['home_base'] = "http://localhost:6424/kumalagroup";
-		$d['base_img'] = $this->api_server . "assets/img_marketing";
+		$d['base_img'] = $this->base_img;
 		echo view("$base\index", $d);
 	}
 	public function detail()
 	{
+		$this->_set_base($this->url);
 		$request = \Config\Services::request();
 		$base = "App\Modules\kumalagroup\Views";
-		$d['index'] = "unit_bisnis";
+		$d['index'] = "prosuk";
 		$d['content'] =  "$base\pages\otomotif";
 		$d['mod'] = "detail";
-		$data = json_decode($this->curl_get($this->api_server . 'api/kmg/otomotif/honda/' . $request->uri->getSegments()[1]));
-		$d['base_img'] = $this->api_server . "assets/img_marketing";
+		$data = json_decode($this->curl_get($this->api_server . 'otomotif/honda/' . base64_decode($request->uri->getSegments()[1])));
+		$d['base_img'] = $this->base_img;
+		$d['brand'] = $data->brand;
 		$d['warna'] = $data->warna;
 		$d['otomotif'] = $data->otomotif;
 		$d['detail'] = $data->detail;
 		$d['dealer'] = $data->dealer;
-		$d['home_base'] = "http://localhost:6424/kumalagroup";
-		$d['base_img'] = $this->api_server . "assets/img_marketing";
 		echo view("$base\index", $d);
 	}
 	public function dealer()
 	{
+		$this->_set_base($this->url);
 		$request = \Config\Services::request();
-		$data = json_decode($this->curl_get($this->api_server . 'api/kmg/dealer/' . $request->uri->getSegments()[1] . '/' . $request->uri->getSegments()[2]));
-		$base_img = $this->api_server . "assets/img_marketing";
-		if ($data) : foreach ($data as $v) : ?>
+		$post = $request->getPost();
+		$data = json_decode($this->curl_get($this->api_server . 'dealer/' . $post['brand'] . '/' . $post['area']));
+		$base_img = $this->base_img;
+		if ($data) :
+			foreach ($data as $v) : ?>
 				<div class="card col-md-5 m-1 flex-column">
 					<div class="card-header"><?= $v->judul ?></div>
 					<div class="card-body">

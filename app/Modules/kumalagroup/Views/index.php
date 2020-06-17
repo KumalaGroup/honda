@@ -9,7 +9,7 @@
     <meta name="description" content="">
     <meta name="author" content="">
 
-    <title>Kumala Group</title>
+    <title>Honda KMG</title>
 
     <!-- Bootstrap core CSS -->
     <link href="<?= base_url() ?>/assets/baru/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
@@ -28,10 +28,10 @@
     <link rel="apple-touch-icon" sizes="144x144" href="<?= base_url() ?>/assets/images/favicon/apple-icon-144x144.png">
     <link rel="apple-touch-icon" sizes="152x152" href="<?= base_url() ?>/assets/images/favicon/apple-icon-152x152.png">
     <link rel="apple-touch-icon" sizes="180x180" href="<?= base_url() ?>/assets/images/favicon/apple-icon-180x180.png">
-    <link rel="icon" type="image/png" sizes="192x192" href="<?= base_url() ?>/assets/images/favicon/android-icon-192x192.png">
-    <link rel="icon" type="image/png" sizes="32x32" href="<?= base_url() ?>/assets/images/favicon/favicon-32x32.png">
-    <link rel="icon" type="image/png" sizes="96x96" href="<?= base_url() ?>/assets/images/favicon/favicon-96x96.png">
-    <link rel="icon" type="image/png" sizes="16x16" href="<?= base_url() ?>/assets/images/favicon/favicon-16x16.png">
+    <link rel="icon" type="image/png" sizes="192x192" href="<?= base_url() ?>/assets/baru/img/logo_honda.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="<?= base_url() ?>/assets/baru/img/logo_honda.png">
+    <link rel="icon" type="image/png" sizes="96x96" href="<?= base_url() ?>/assets/baru/img/logo_honda.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="<?= base_url() ?>/assets/baru/img/logo_honda.png">
     <link rel="manifest" href="<?= base_url() ?>/assets/images/favicon/manifest.json">
     <meta name="msapplication-TileColor" content="#ffffff">
     <meta name="msapplication-TileImage" content="<?= base_url() ?>/assets/images/favicon/ms-icon-144x144.png">
@@ -248,7 +248,7 @@
 
 <body id="page-top">
     <nav class="navbar navbar-expand-lg bg-secondary shadow fixed-top" id="mainNav">
-        <a href="<?= $home_base ?>"><img src="<?= base_url() ?>/assets/baru/img/logo.png" style="margin-left: 15px;" alt="Logo" width="160px" height="60px"></a>
+        <a href="<?= base_url() ?>"><img src="<?= base_url() ?>/assets/baru/img/logo_honda.png" style="margin-left: 15px;" alt="Logo" width="auto" height="60px"></a>
         <button class="navbar-toggler navbar-toggler-right bg-primary text-white rounded" type="button" data-toggle="collapse" data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
             Menu
             <i class="fas fa-bars"></i>
@@ -256,64 +256,22 @@
         <div class="collapse navbar-collapse" id="navbarResponsive">
             <ul class="navbar-nav ml-auto">
                 <li class="nav-item mx-0 mx-lg-1">
-                    <a class="nav-link py-3 px-0 px-lg-3 rounded js-scroll-trigger <?= ($index == 'index') ? 'active' : '' ?>" href="<?= ($index == 'index') ? '#home' : $home_base ?>">Beranda</a>
+                    <a class="nav-link py-3 px-0 px-lg-3 rounded js-scroll-trigger <?= ($index == 'index') ? 'active' : '' ?>" href="javascript:void(0)">Beranda</a>
                 </li>
                 <li class="nav-item mx-0 mx-lg-1">
-                    <a class="nav-link py-3 px-0 px-lg-3 rounded js-scroll-trigger <?= ($index == 'tentang') ? 'active' : '' ?>" href="<?= ($index == 'index') ? '#about' : "$home_base/tentang" ?>">Tentang</a>
-                </li>
-                <?php if ($index == 'index') : ?>
-                    <li class="nav-item mx-0 mx-lg-1">
-                        <a class="nav-link py-3 px-0 px-lg-3 rounded js-scroll-trigger" href="#unitbisnis">Unit Bisnis</a>
-                    </li>
-                <?php else : ?>
-                    <li class="nav-item mx-0 mx-lg-1 dropdown megamenu-li">
-                        <a class="nav-link py-3 px-0 px-lg-3 rounded js-scroll-trigger dropdown-toggle <?= ($index == 'unit_bisnis') ? 'active' : '' ?>" href="javascript:void(0)" id="dropdown01" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Unit Bisnis</a>
-                        <div class="dropdown-menu megamenu" aria-labelledby="dropdown01">
-                            <div class="row">
-                                <div class="col-sm-6 col-lg-3">
-                                    <h4 class=""> <a href="<?= $home_base ?>/otomotif">OTOMOTIF</a></h4>
-                                    <ul type="square">
-                                        <li><a class="dropdown-item" href="https://mazda-makassar.com">Mazda</a></li>
-                                        <li><a class="dropdown-item" href="<?= base_url() ?>">Honda</a></li>
-                                        <li><a class="dropdown-item" href="<?= $home_base ?>/otomotif/hino">Hino</a></li>
-                                        <li><a class="dropdown-item" href="<?= $home_base ?>/otomotif/wuling">Wuling</a></li>
-                                        <li><a class="dropdown-item" href="https://www.kumala.mercedes-benz.co.id/en/desktop/passenger-cars.html">Mercedes-Benz</a></li>
-                                    </ul>
-                                </div>
-                                <div class="col-sm-6 col-lg-3">
-                                    <h4 class=""> <a href="<?= $home_base ?>/property">PROPERTY</a></h4>
-                                    <ul type="square">
-                                        <li><a class="dropdown-item" href="<?= $home_base ?>/property/retail">Retail</a></li>
-                                        <li><a class="dropdown-item" href="<?= $home_base ?>/property/primewood">Primewood</a></li>
-                                    </ul>
-                                </div>
-                                <div class="col-sm-6 col-lg-3">
-                                    <h4 class=""><a href="<?= $home_base ?>/trading">TRADING</a></h4>
-                                    <!-- <ul type="square">
-                                        <li><a class="dropdown-item" href="{{route('trade')}}">Oil</a></li>
-                                        <li><a class="dropdown-item" href="{{route('trade')}}">Tyre</a></li>
-                                    </ul> -->
-                                </div>
-                                <div class="col-sm-6 col-lg-3">
-                                    <h4 class=""><a href="<?= $home_base ?>/mining">MINING</a></h4>
-                                    <!-- <ul type="square">
-                                        <li><a class="dropdown-item" href="{{route('mining')}}">Contractor</a></li>
-                                        <li><a class="dropdown-item" href="{{route('mining')}}">Heavy Machineries Rent</a></li>
-                                        <li><a class="dropdown-item" href="mining.html">Mining 3</a></li>
-                                    </ul> -->
-                                </div>
-                            </div>
-                        </div>
-                    </li>
-                <?php endif ?>
-                <li class="nav-item mx-0 mx-lg-1">
-                    <a class="nav-link py-3 px-0 px-lg-3 rounded js-scroll-trigger <?= ($index == 'berita') ? 'active' : '' ?>" href="<?= ($index == 'index') ? '#berita' : "$home_base/berita" ?>">Berita</a>
+                    <a class="nav-link py-3 px-0 px-lg-3 rounded js-scroll-trigger <?= ($index == 'tentang') ? 'active' : '' ?>" href="javascript:void(0)">Tentang</a>
                 </li>
                 <li class="nav-item mx-0 mx-lg-1">
-                    <a class="nav-link py-3 px-0 px-lg-3 rounded js-scroll-trigger <?= ($index == 'karir') ? 'active' : '' ?>" href="<?= ($index == 'index') ? '#karir' : "$home_base/karir" ?>">Karir</a>
+                    <a class="nav-link py-3 px-0 px-lg-3 rounded js-scroll-trigger active" href="<?= base_url() ?>">Unit Bisnis</a>
                 </li>
                 <li class="nav-item mx-0 mx-lg-1">
-                    <a class="nav-link py-3 px-0 px-lg-3 rounded js-scroll-trigger <?= ($index == 'kontak') ? 'active' : '' ?>" href="<?= $home_base ?>/kontak">Kontak</a>
+                    <a class="nav-link py-3 px-0 px-lg-3 rounded js-scroll-trigger <?= ($index == 'berita') ? 'active' : '' ?>" href="javascript:void(0)">Berita</a>
+                </li>
+                <li class="nav-item mx-0 mx-lg-1">
+                    <a class="nav-link py-3 px-0 px-lg-3 rounded js-scroll-trigger <?= ($index == 'karir') ? 'active' : '' ?>" href="javascript:void(0)">Karir</a>
+                </li>
+                <li class="nav-item mx-0 mx-lg-1">
+                    <a class="nav-link py-3 px-0 px-lg-3 rounded js-scroll-trigger <?= ($index == 'kontak') ? 'active' : '' ?>" href="javascript:void(0)">Kontak</a>
                 </li>
             </ul>
             <div id="top-search">
