@@ -45,6 +45,7 @@
 
     <!-- Custom styles for this template -->
     <link href="<?= base_url() ?>/assets/baru/css/freelancer.min.css" rel="stylesheet">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
     <!-- Google Tag Manager -->
     <script>
         (function(w, d, s, l, i) {
@@ -379,7 +380,7 @@
     </a>
 
     <!-- Bootstrap core JavaScript -->
-    <script src="<?= base_url() ?>/assets/baru/vendor/jquery/jquery.min.js"></script>
+    <!-- <script src="<?= base_url() ?>/assets/baru/vendor/jquery/jquery.min.js"></script> -->
     <script src="<?= base_url() ?>/assets/baru/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
     <script src="<?= base_url() ?>/assets/baru/vendor/bootstrap/js/bootstrap.js"></script>
 
