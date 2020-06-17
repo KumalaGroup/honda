@@ -34,6 +34,7 @@ class Home extends Controller
 		$d['content'] =  "$base\pages\otomotif";
 		$data = json_decode($this->curl_get($this->api_server . 'otomotif/honda'));
 		$d['head'] = $data->head;
+		$d['dealer'] = $data->dealer;
 		$d['otomotif'] = [];
 		if ($data->otomotif) {
 			$d['page'] = ($request->uri->getSegments()[0] == "page") ? $request->uri->getSegments()[1] : 1;
