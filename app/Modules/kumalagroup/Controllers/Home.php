@@ -97,6 +97,22 @@ class Home extends Controller
 			<p>Dealer di kota anda belum tersedia</p>
 <?php endif;
 	}
+	public function kontak()
+	{
+		$this->_set_base($this->url);
+		$request = \Config\Services::request();
+		$post =  $request->getPost();
+		if ($post) {
+			foreach ($post as $i => $v) $data[$i] = preg_replace('#<script(.*?)>(.*?)</script>#is', '', strip_tags($v));
+			$result = $this->curl_post($this->api_server . 'bantuan', $data);
+			echo $result;
+		} else {
+			$base = "App\Modules\kumalagroup\Views";
+			$d['content'] = $base . '\pages\kontak';
+			$d['index'] = "kontak";
+			echo view("$base\index", $d);
+		}
+	}
 	function curl_post($url, $data)
 	{
 		$curl = curl_init($url);
