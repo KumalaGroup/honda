@@ -11,7 +11,7 @@ class Home extends Controller
 		"http://portal2.kumalagroup.co.id/kmg/",
 		"http://portal3.kumalagroup.co.id/kmg/"
 	];
-	private $base_img;
+	private $base_img = "https://kumalagroup.id/assets/img_marketing";
 	private $api_server;
 	function _set_base($url)
 	{
@@ -20,7 +20,6 @@ class Home extends Controller
 			$r = $headers && strpos($headers[0], '200') ? 1 : 0;
 			if ($r == 1) {
 				$this->api_server = $v . "api/tHLxW586aIi1YXsQeEKBwhPOJzqfjFokybGmCgRN0M4cnlvduTrVAU2pZS9D37/";
-				$this->base_img = $v . "assets/img_marketing";
 				break;
 			}
 		}
