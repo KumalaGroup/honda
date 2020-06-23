@@ -7,7 +7,9 @@
                 </div>
                 <div class="col-md-7 p-3 mb-5"> <img id="main-color" src="<?= "$base_img/otomotif/$otomotif->gambar" ?>" width="100%" height="auto" class="img-fluid" alt="" data-animate="fadeInRight"> </div>
                 <div class="col-md-3 p-3 mb-5">
-                    <h4><?= $otomotif->model ?></h4> <a download href="<?= "$base_img/otomotif/brosur/$otomotif->brosur" ?>" class="btn btn-xl btn-outline-danger btn-block" style="border-color:#FA0F0c; font-weight: 500;">Download Brosur</a> <button type="button" class="btn btn-xl btn-outline-danger btn-block" style="border-color:#FA0F0c;font-weight: 500;" data-toggle="modal" data-target="#testdr">Layanan</button>
+                    <h4><?= $otomotif->model ?></h4>
+                    <h6>Mulai dari Rp. <?= number_format($otomotif->harga, 0, '', '.') ?> <br><small class="text-center text-danger">*Harga akan disesuaikan dengan domisili pemesan</small></h6>
+                    <a download href="<?= "$base_img/otomotif/brosur/$otomotif->brosur" ?>" class="btn btn-xl btn-outline-danger btn-block" style="border-color:#FA0F0c; font-weight: 500;">Download Brosur</a> <button type="button" class="btn btn-xl btn-outline-danger btn-block" style="border-color:#FA0F0c;font-weight: 500;" data-toggle="modal" data-target="#testdr">Layanan</button>
                     <div class="modal fade" id="testdr" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
                         <div class="modal-dialog" role="document">
                             <div class="modal-content">
@@ -128,24 +130,15 @@
             a.src = src;
             a.css("transition-timing-function", "ease-in");
         }
-    </script><?php else : ?> <style>
-        #listotomotifmas {
-            background-image: url('<?= "$base_img/head/$head->foto" ?>');
-            background-repeat: no-repeat;
-            background-size: cover;
-            height: 100vh;
-        }
-
+    </script><?php else : ?>
+    <style>
         #mainNav a {
             font-size: 11pt;
         }
     </style>
-    <section class="bg-primary text-white mb-0" id="listotomotifmas">
-        <div class="container"> <br><br><br><br>
-            <p class="text-center text-white" style="font-size: 40pt;margin-top: 50px"> <b><?= strtoupper($head->jenis) ?></b></p><br><br>
-        </div>
-        </div>
-    </section>
+    <div style="padding-top: calc(3rem + 39px);">
+        <img src="<?= "$base_img/head/$head->foto" ?>" alt="" class="img-fluid" width="100%" height="auto">
+    </div>
     <section class="portfolio" id="unitbisnis">
         <div id="dealer" class="container">
             <div class="row text-center mb-5">
@@ -180,8 +173,8 @@
                         <h4 class="text-center"><?= $v->model ?></h4> <img src="<?= "$base_img/otomotif/$v->gambar" ?>" width="100%" height="200" alt="" style="object-fit: contain;"> <br>
                         <h6 class="text-center" style="margin-top:10px;">Mulai Dari Rp. <?= number_format($v->harga, 0, '', '.') ?></h6> <br>
                         <div class="row">
-                            <div class="col-md-6"> <a class="btn btn-l btn-outline-primary mt-0 mb-1" href="<?= base_url("/detail/" . base64_encode($v->id)) ?>"> Explore </a> </div>
-                            <div class="col-md-6"> <a class="btn btn-l btn-outline-primary mt-0 mb-1" onclick="$('#form_simulasi').trigger('reset');simulasi('<?= $v->model ?>','<?= number_format($v->harga, 0, '', '.') ?>');" data-toggle="modal" href="#simulasi"> Simulasi Kredit </a> </div>
+                            <div class="col-6"> <a class="btn btn-l btn-outline-primary mt-0 mb-1" href="<?= base_url("/detail/" . base64_encode($v->id)) ?>"> Explore </a> </div>
+                            <div class="col-6"> <a class="btn btn-l btn-outline-primary mt-0 mb-1" onclick="$('#form_simulasi').trigger('reset');simulasi('<?= $v->model ?>','<?= number_format($v->harga, 0, '', '.') ?>');" data-toggle="modal" href="#simulasi"> Simulasi Kredit </a> </div>
                         </div>
                     </div><?php endforeach ?> </div>
             <div class=" row">
@@ -330,4 +323,5 @@
                 $('#load_dealer').html(r);
             });
         }
-    </script><?php endif ?>
+    </script>
+<?php endif ?>
