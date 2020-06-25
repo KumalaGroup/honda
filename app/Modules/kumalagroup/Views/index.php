@@ -34,6 +34,8 @@
     <link rel="stylesheet" href="<?= base_url() ?>/assets/baru/owlcarousel/dist/assets/owl.carousel.min.css">
     <link rel="stylesheet" href="<?= base_url() ?>/assets/baru/owlcarousel/dist/assets/owl.theme.default.min.css">
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <link href="<?= base_url() ?>/assets/baru/datepicker.css" rel="stylesheet">
+    <script src="<?= base_url() ?>/assets/baru/bootstrap-datepicker.js"></script>
     <script src="<?= base_url() ?>/assets/baru/owlcarousel/dist/owl.carousel.min.js"></script>
     <script>
         (function(w, d, s, l, i) {
