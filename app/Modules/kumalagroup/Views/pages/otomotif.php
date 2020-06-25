@@ -79,27 +79,33 @@
                     <h2 class="text-center text-secondary mb-0">Video</h2> <br><br>
                     <div class="embed-responsive embed-responsive-16by9"> <iframe class="embed-responsive-item" src="<?= str_replace("watch?v=", "embed/", $otomotif->video) ?>" allowfullscreen></iframe> </div><br><br>
                 </div>
-            </div><br><br>
-            <div class="row">
-                <div class="col-md-12">
-                    <h2 class="text-center text-secondary mb-0">Detail</h2> <br><br>
-                </div>
             </div>
-            <h4>Fitur <?= $otomotif->model ?></h4> <br><?php foreach ($detail as $i => $v) : if ($v) : if ($i % 2) : ?> <div class="row">
-                            <div class="col-md-8"> <br>
-                                <h5><?= $v->nama_detail ?></h5> <br>
-                                <p><?= $v->deskripsi ?>.</p>
+            <?php if ($detail) : ?>
+                <br><br>
+                <div class="row">
+                    <div class="col-md-12">
+                        <h2 class="text-center text-secondary mb-0">Detail</h2> <br><br>
+                    </div>
+                </div>
+                <h4>Fitur <?= $otomotif->model ?></h4> <br>
+                <?php foreach ($detail as $i => $v) : if ($v) : if ($i % 2) : ?> <div class="row">
+                                <div class="col-md-8"> <br>
+                                    <h5><?= $v->nama_detail ?></h5> <br>
+                                    <p><?= $v->deskripsi ?>.</p>
+                                </div>
+                                <div class="col-md-4"> <img src="<?= "$base_img/otomotif/detail/$v->gambar" ?>" width="100%" height="auto" class="img-fluid" alt=""> </div>
+                            </div><?php else : ?> <div class="row">
+                                <div class="col-md-4"> <img src="<?= "$base_img/otomotif/detail/$v->gambar" ?>" width="100%" height="auto" class="img-fluid" alt=""> </div>
+                                <div class="col-md-8"> <br>
+                                    <h5><?= $v->nama_detail ?></h5> <br>
+                                    <p><?= $v->deskripsi ?>.</p>
+                                </div>
                             </div>
-                            <div class="col-md-4"> <img src="<?= "$base_img/otomotif/detail/$v->gambar" ?>" width="100%" height="auto" class="img-fluid" alt=""> </div>
-                        </div><?php else : ?> <div class="row">
-                            <div class="col-md-4"> <img src="<?= "$base_img/otomotif/detail/$v->gambar" ?>" width="100%" height="auto" class="img-fluid" alt=""> </div>
-                            <div class="col-md-8"> <br>
-                                <h5><?= $v->nama_detail ?></h5> <br>
-                                <p><?= $v->deskripsi ?>.</p>
-                            </div>
-                        </div><?php endif;
-                                                            endif;
-                                                        endforeach ?> <br>
+                <?php endif;
+                            endif;
+                        endforeach ?>
+                <br>
+            <?php endif ?>
         </div>
     </section>
     <div class="modal fade" id="komparasi" tabindex="-1">
