@@ -90,9 +90,9 @@
                                 <h5><?= $v->nama_detail ?></h5> <br>
                                 <p><?= $v->deskripsi ?>.</p>
                             </div>
-                            <div class="col-md-4"> <img src="<?= "$base_img/otomotif/detail/$v->gambar" ?>" width="350" height="250" alt=""> </div>
+                            <div class="col-md-4"> <img src="<?= "$base_img/otomotif/detail/$v->gambar" ?>" width="100%" height="auto" class="img-fluid" alt=""> </div>
                         </div><?php else : ?> <div class="row">
-                            <div class="col-md-4"> <img src="<?= "$base_img/otomotif/detail/$v->gambar" ?>" width="350" height="250" alt=""> </div>
+                            <div class="col-md-4"> <img src="<?= "$base_img/otomotif/detail/$v->gambar" ?>" width="100%" height="auto" class="img-fluid" alt=""> </div>
                             <div class="col-md-8"> <br>
                                 <h5><?= $v->nama_detail ?></h5> <br>
                                 <p><?= $v->deskripsi ?>.</p>
