@@ -31,10 +31,10 @@
     <link rel="stylesheet" href="<?= base_url() ?>/assets/css/bootstrap.css">
     <link rel="stylesheet" href="<?= base_url() ?>/assets/css/animate.css">
     <link href="<?= base_url() ?>/assets/baru/css/freelancer.min.css" rel="stylesheet">
-    <link rel="stylesheet" href="http://kumalagroup.id/assets/baru/owlcarousel/dist/assets/owl.carousel.min.css">
-    <link rel="stylesheet" href="http://kumalagroup.id/assets/baru/owlcarousel/dist/assets/owl.theme.default.min.css">
+    <link rel="stylesheet" href="<?= base_url() ?>/assets/baru/owlcarousel/dist/assets/owl.carousel.min.css">
+    <link rel="stylesheet" href="<?= base_url() ?>/assets/baru/owlcarousel/dist/assets/owl.theme.default.min.css">
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
-    <script src="http://kumalagroup.id/assets/baru/owlcarousel/dist/owl.carousel.min.js"></script>
+    <script src="<?= base_url() ?>/assets/baru/owlcarousel/dist/owl.carousel.min.js"></script>
     <script>
         (function(w, d, s, l, i) {
             w[l] = w[l] || [];
