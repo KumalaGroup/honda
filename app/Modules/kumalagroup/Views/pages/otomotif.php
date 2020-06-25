@@ -1,12 +1,43 @@
 <?php if ($mod == "detail") : ?> <section class="portfolio" id="unitbisnis" style="margin-top:80px;">
         <div class="container"> <br>
             <div class="row">
-                <div class="col-md-2 text-center p-3 mb-5">
-                    <h6>Pilih Warna</h6> <?php foreach ($warna as $v) : if ($v) : ?> <img class="side mb-2" onmouseover="mOver('<?= $base_img . '/otomotif/warna/' . $v->gambar ?>')" width="100px" height="auto" class="img-fluid" src="<?= "$base_img/otomotif/warna/$v->gambar" ?>" alt="" data-animate="fadeInRight"> <?php endif;
-                                                                                                                                                                                                                                                                                                                    endforeach ?>
+                <div class="col-md-9 mb-3">
+                    <div class="col-12 mb-2">
+                        <img id="main-color" src="<?= "$base_img/otomotif/$otomotif->gambar" ?>" width="100%" height="auto" alt="" data-animate="fadeInRight" class="img-fluid">
+                    </div>
+                    <div class="col-12">
+                        <div class="owl-carousel owl-theme">
+                            <?php foreach ($warna as $v) : if ($v) : ?>
+                                    <div class="item">
+                                        <img class="img-fluid" onclick="mOver('<?= $base_img . '/otomotif/warna/' . $v->gambar ?>')" width="100px" height="auto" src="<?= "$base_img/otomotif/warna/$v->gambar" ?>" alt="" data-animate="fadeInRight">
+                                    </div>
+                            <?php endif;
+                            endforeach ?>
+                        </div>
+                        <script>
+                            $('.owl-carousel').owlCarousel({
+                                // loop: true,
+                                margin: 10,
+                                responsiveClass: true,
+                                responsive: {
+                                    0: {
+                                        items: 3,
+                                        nav: false
+                                    },
+                                    500: {
+                                        items: 4,
+                                        nav: false
+                                    },
+                                    1000: {
+                                        items: 5,
+                                        nav: false
+                                    }
+                                }
+                            })
+                        </script>
+                    </div>
                 </div>
-                <div class="col-md-7 p-3 mb-5"> <img id="main-color" src="<?= "$base_img/otomotif/$otomotif->gambar" ?>" width="100%" height="auto" class="img-fluid" alt="" data-animate="fadeInRight"> </div>
-                <div class="col-md-3 p-3 mb-5">
+                <div class="col-md-3 mb-3">
                     <h4><?= $otomotif->model ?></h4>
                     <h6>Mulai dari Rp. <?= number_format($otomotif->harga, 0, '', '.') ?> <br><small class="text-center text-danger">*Harga akan disesuaikan dengan domisili pemesan</small></h6>
                     <a download href="<?= "$base_img/otomotif/brosur/$otomotif->brosur" ?>" class="btn btn-xl btn-outline-danger btn-block" style="border-color:#FA0F0c; font-weight: 500;">Download Brosur</a> <button type="button" class="btn btn-xl btn-outline-danger btn-block" style="border-color:#FA0F0c;font-weight: 500;" data-toggle="modal" data-target="#testdr">Layanan</button>
