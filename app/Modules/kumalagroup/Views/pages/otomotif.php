@@ -304,7 +304,7 @@
                         </div>
                         <div class="row">
                             <div class="col-md-12">
-                                <p><strong>Note:*</strong> Syarat tiap bank bisa berbeda-beda Perhitungan ini sifatnya simulasi belaka. Untuk lebih jelasnya silakan hubungi pemberi kredit.</p>
+                                <p><strong>Note:*</strong> Syarat tiap bank bisa berbeda-beda Perhitungan ini sifatnya simulasi belaka. Untuk lebih jelasnya silakan hubungi virtual assisten kami di 081212100700 atau mengisi form layanan kami.</p>
                             </div>
                         </div>
                     </div>
