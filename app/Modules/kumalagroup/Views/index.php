@@ -266,8 +266,8 @@
                     <h4 class="mb-4">IKUTI KAMI</h4>
                     <p class="lead mb-0" align="left">Ayo Ikuti Sosial Media Kami</p>
                     <ul class="list-inline mb-0">
-                        <li class="list-inline-item"> <a class="btn btn-outline-light btn-social text-center rounded-circle" href="https://www.facebook.com/kumalagroup"> <i class="fab fa-fw fa-facebook-f"></i> </a> </li>
-                        <li class="list-inline-item"> <a class="btn btn-outline-light btn-social text-center rounded-circle" href="https://www.instagram.com/kumalagroup/"> <i class="fab fa-fw fa-instagram"></i> </a> </li>
+                        <li class="list-inline-item"> <a class="btn btn-outline-light btn-social text-center rounded-circle" href="https://www.facebook.com/HondaKumalaGroup"> <i class="fab fa-fw fa-facebook-f"></i> </a> </li>
+                        <li class="list-inline-item"> <a class="btn btn-outline-light btn-social text-center rounded-circle" href="https://www.instagram.com/honda_kmg/?hl=en"> <i class="fab fa-fw fa-instagram"></i> </a> </li>
                         <li class="list-inline-item"> <a class="btn btn-outline-light btn-social text-center rounded-circle" href="https://www.youtube.com/channel/UC7R09sGLSsz-Ky1nQs1Qbiw"> <i class="fab fa-fw fa-youtube"></i> </a> </li>
                     </ul>
                 </div>
