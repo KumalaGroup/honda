@@ -261,7 +261,7 @@
                 <div class="col-md-4 mb-5 mb-lg-0">
                     <h5>HONDA KMG MANADO</h5>
                     <h6>PT. Kumala Motor Cemerlang</h6>
-                    <hr>
+                    <hr class="my-4">
                     <p>JL. Raya Manado - Tomohon KM 7, Winangun Atas <br>
                         Pineleng, Minahasa, Sulawesi Utara <br>
                         95661</p>
@@ -279,7 +279,7 @@
                         Minggu : 11.00 - 16.00</p>
                 </div>
                 <div class="col-md-4 mb-5 mb-lg-0">
-                    <h4 class="mb-4">IKUTI KAMI</h4>
+                    <h5 class="mb-4">IKUTI KAMI</h5>
                     <p>Ayo Ikuti Sosial Media Kami</p>
                     <ul class="list-inline mb-0">
                         <li class="list-inline-item"> <a class="btn btn-outline-light btn-social text-center rounded-circle" href="https://www.facebook.com/HondaKumalaGroup" target="_blank"> <i class="fab fa-fw fa-facebook-f"></i> </a> </li>
