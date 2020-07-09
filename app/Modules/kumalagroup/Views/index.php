@@ -259,35 +259,33 @@
         <div class="container">
             <div class="row">
                 <div class="col-md-4 mb-5 mb-lg-0">
-                    <h4 class="mb-4">KUMALA GROUP</h4>
-                    <p class="lead mb-0" align="justify">Didirikan pada tahun 1983, Kumala Group adalah salah satu perusahaan bisnis terbesar di sisi timur Indonesia. Kumala Group membangun perusahaan yang kompetitif dengan mengembangkan kerjasama yang saling menguntungkan antara merek-merek terkemuka nasional dan internasional di berbagai bidang.</p>
+                    <h5>HONDA KMG MANADO</h5>
+                    <h6>PT. Kumala Motor Cemerlang</h6>
+                    <hr>
+                    <p>JL. Raya Manado - Tomohon KM 7, Winangun Atas <br>
+                        Pineleng, Minahasa, Sulawesi Utara <br>
+                        95661</p>
+                </div>
+                <div class="col-md-4 mb-5 mb-lg-0">
+                    <h5>Info Layanan</h5>
+                    <hr>
+                    <p>Telp &nbsp;&nbsp;&nbsp;&nbsp;: (0431) 821 821 <br>
+                        WA &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;: 0813 8821 7676 <br>
+                        Email &nbsp;: honda@honda-kmg.com</p>
+                    <hr>
+                    <h6>Jam Operasional :</h6>
+                    <p>Senin - Jumat : 08.30 - 19.00 <br>
+                        Sabtu : 08.30 - 17.00 <br>
+                        Minggu : 11.00 - 16.00</p>
                 </div>
                 <div class="col-md-4 mb-5 mb-lg-0">
                     <h4 class="mb-4">IKUTI KAMI</h4>
-                    <p class="lead mb-0" align="left">Ayo Ikuti Sosial Media Kami</p>
+                    <p>Ayo Ikuti Sosial Media Kami</p>
                     <ul class="list-inline mb-0">
                         <li class="list-inline-item"> <a class="btn btn-outline-light btn-social text-center rounded-circle" href="https://www.facebook.com/HondaKumalaGroup" target="_blank"> <i class="fab fa-fw fa-facebook-f"></i> </a> </li>
                         <li class="list-inline-item"> <a class="btn btn-outline-light btn-social text-center rounded-circle" href="https://www.instagram.com/honda_kmg/?hl=en" target="_blank"> <i class="fab fa-fw fa-instagram"></i> </a> </li>
                         <li class="list-inline-item"> <a class="btn btn-outline-light btn-social text-center rounded-circle" href="https://www.youtube.com/channel/UC7R09sGLSsz-Ky1nQs1Qbiw" target="_blank"> <i class="fab fa-fw fa-youtube"></i> </a> </li>
                     </ul>
-                </div>
-                <div class="col-md-4">
-                    <h4 class=mb-4">KIRIM PESAN</h4>
-                    <form name="sentMessage" id="contactForm" novalidate="novalidate">
-                        <div class="control-group">
-                            <div class="form-group"> <input type="nama" class="form-control" id="nama" placeholder="Masukkan nama Anda"> </div>
-                        </div>
-                        <div class="control-group">
-                            <div class="form-group"> <input type="email" class="form-control" id="email" placeholder="Masukkan Email Anda"> </div>
-                        </div>
-                        <div class="control-group">
-                            <div class="form-group"> <textarea class="form-control" id="message" rows="5" placeholder="Message" required="required"></textarea>
-                                <p class="help-block text-danger"></p>
-                            </div>
-                        </div><br>
-                        <div id="success"></div>
-                        <div class="form-group"> <button type="submit" class="btn btn-xl btn-outline-light" id="sendMessageButton">Kirim</button> </div>
-                    </form>
                 </div>
             </div>
         </div>
