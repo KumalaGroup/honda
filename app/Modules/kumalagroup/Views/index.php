@@ -290,7 +290,7 @@
             </div>
         </div>
     </footer><!-- <div class="copyright py-4 text-center text-white"> <div class="container"> <small>Copyright &copy; Your Website 2018</small> </div></div>-->
-    <div class="scroll-to-top d-lg-none" id="toppp"> <a class="js-scroll-trigger d-block text-center text-white rounded" href="#page-top"> <i class="fa fa-chevron-up"></i> </a> </div><a href="https://api.whatsapp.com/send?phone=62081212100700" class="float" target="_blank"> <i class="fab fa-whatsapp my-float"></i> </a>
+    <div class="scroll-to-top d-lg-none" id="toppp"> <a class="js-scroll-trigger d-block text-center text-white rounded" href="#page-top"> <i class="fa fa-chevron-up"></i> </a> </div><a href="https://api.whatsapp.com/send?phone=6281388217676" class="float" target="_blank"> <i class="fab fa-whatsapp my-float"></i> </a>
     <script src="<?= base_url() ?>/assets/baru/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
     <script src="<?= base_url() ?>/assets/baru/vendor/bootstrap/js/bootstrap.js"></script>
     <script src="<?= base_url() ?>/assets/baru/vendor/jquery-easing/jquery.easing.min.js"></script>
