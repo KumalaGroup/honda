@@ -54,12 +54,8 @@
                                                 <option value="Test Drive">Test Drive</option>
                                                 <option value="Penawaran">Penawaran</option>
                                             </select> </div>
-                                        <div class="form-group" style="display: none;"> <label for="nama">Tanggal Test Drive: </label> <input type="text" name="tanggalTestDrive" class="form-control" id="tanggalTestDrive" placeholder="Masukkan tanggal Test Drive" autocomplete="off" required> </div>
                                         <div class="form-group"> <label for="nama">Nama: </label> <input type="text" name="nama" class="form-control" id="nama" placeholder="Nama Lengkap anda" required> </div>
                                         <div class="form-group"> <label for="telepon">No Telepon: </label> <input name="telepon" type="text" class="form-control" onkeydown="input_number(event)" id="telepon" placeholder="No Telepon anda" required> </div>
-                                        <div class="form-group"> <label for="dealer">Dealer: </label> <select id="idDealer" name="idDealer" class="form-control" required>
-                                                <option value="" selected disabled>-- Silahkan Pilih Dealer --</option> <?php foreach ($dealer as $v) : ?> <option value="<?= $v->id ?>"><?= ucwords($v->judul) ?></option> <?php endforeach ?>
-                                            </select> </div>
                                         <div class="form-group"> <label for="kota">Asal Kota: </label> <input name="asalKota" type="text" class="form-control" id="asalKota" placeholder="Asal Kota anda" required> </div><input type="hidden" name="web" value="true"> <button id="submit" class="btn btn-danger">Kirim</button>
                                     </form>
                                 </div>
@@ -108,39 +104,13 @@
             <?php endif ?>
         </div>
     </section>
-    <div class="modal fade" id="komparasi" tabindex="-1">
-        <div class="modal-dialog">
-            <div class="modal-body">
-                <div class="modal-content">
-                    <div class="modal-header">
-                        <h4 class="modal-title">Bandingkan dengan</h4> <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
-                    </div>
-                    <div class="modal-body">
-                        <div class="row">
-                            <div class="col-md-12">
-                                <form id="form_ilj">
-                                    <div class="form-group"> <label for="brand">Brand: </label> <select id="brand" name="brand" class="form-control" required>
-                                            <option value="" selected disabled>-- Silahkan Pilih Brand --</option> <?php foreach ($brand as $v) : ?> <option value="<?= $v->id ?>"><?= ucwords($v->jenis) ?></option> <?php endforeach ?>
-                                        </select> </div>
-                                    <div class="form-group"> <label for="model">Model: </label> <select id="model" name="model" class="form-control" required>
-                                            <option value="" selected disabled>-- Silahkan Pilih Model --</option>
-                                        </select> </div><input type="hidden" name="web" value="true"> <button id="modelsdjd" class="btn btn-danger">Lihat Perbandingan</button>
-                                </form>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
+
     <script>
         $('#layanan').change(function() {
             if ($(this).val() == "Test Drive") $('#form').find('.form-group').eq(1).removeAttr('style');
             else $('#form').find('.form-group').eq(1).css('display', 'none');
         });
-        $('#tanggalTestDrive').datepicker({
-            'format': 'dd-mm-yyyy'
-        });
+
         $('#submit').click(function(e) {
             e.preventDefault();
             var data = $('#form').serialize();
@@ -153,13 +123,6 @@
                     });
                 });
             }
-        });
-        $('#brand').change(function() {
-            $.post("<?= base_url("model") ?>", {
-                'brand': $(this).val()
-            }, function(r) {
-                $('#model').html(r);
-            });
         });
 
         function mOver(src) {

@@ -55,11 +55,11 @@ class Home extends Controller
 		$d['mod'] = "detail";
 		$data = json_decode($this->curl_get($this->api_server . 'otomotif/honda/' . base64_decode($request->uri->getSegments()[1])));
 		$d['base_img'] = $this->base_img;
-		$d['brand'] = $data->brand;
+		// $d['brand'] = $data->brand;
 		$d['warna'] = $data->warna;
 		$d['otomotif'] = $data->otomotif;
 		$d['detail'] = $data->detail;
-		$d['dealer'] = $data->dealer;
+		// $d['dealer'] = $data->dealer;
 		echo view("$base\index", $d);
 	}
 	public function dealer()
