@@ -16,7 +16,7 @@
     <?php } ?>
 </div>
 
-<section class="section bg-light border-top-0">
+<section class="section bg-light border-top-0 m-0">
     <div class="container">
         <div class="row text-center appear-animation" data-appear-animation="slideInUp" data-appear-animation-delay="0" data-appear-animation-duration="1s">
             <div class="col-md-10 mx-md-auto">
@@ -54,20 +54,19 @@
                     }}">
                     <?php foreach ($otomotif as $v) { ?>
                         <div>
-                            <div class="hover-effect-3d">
-                                <a href="<?= base_url("/detail/" . base64_encode($v->id)) ?>">
-                                    <div class="thumb-info thumb-info-no-borders thumb-info-no-borders-rounded thumb-info-lighten thumb-info-bottom-info thumb-info-bottom-info-dark thumb-info-bottom-info-dark-linear">
-                                        <div class="thumb-info-wrapper">
-                                            <img src="<?= "$base_img/otomotif/$v->gambar" ?>" class="p-2" height="200" alt="" style="object-fit: contain;">
-                                            <div class="thumb-info-title">
-                                                <div class="thumb-info-inner"><?= $v->model ?>
-                                                    <em>Mulai Dari Rp. <strong><?= number_format($v->harga, 0, '', '.') ?></strong></em>
-                                                </div>
+                            <a href="<?= base_url("/detail/" . base64_encode($v->id)) ?>">
+                                <div class="thumb-info thumb-info-no-borders thumb-info-no-borders-rounded thumb-info-lighten thumb-info-bottom-info thumb-info-hide-wrapper-bg">
+                                    <div class="thumb-info-wrapper">
+                                        <img src="<?= "$base_img/otomotif/$v->gambar" ?>" class="p-2" height="200" alt="" style="object-fit: contain;">
+                                        <div class="thumb-info-title">
+                                            <div class="thumb-info-inner text-center">
+                                                <h5 class="m-0 text-secondary font-weight-bold" style="font-size: 12pt;"><?= $v->model ?></h5>
+                                                <p class="m-0" style="font-size: 10pt;">Mulai dari <span class="text-secondary font-weight-bold">IDR <?= number_format($v->harga, 0, '', '.') ?></span></p>
                                             </div>
                                         </div>
                                     </div>
-                                </a>
-                            </div>
+                                </div>
+                            </a>
                         </div>
                     <?php } ?>
                 </div>

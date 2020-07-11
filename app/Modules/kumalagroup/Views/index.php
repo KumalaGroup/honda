@@ -57,8 +57,14 @@
     <script src="vendor/modernizr/modernizr.min.js"></script>
 </head>
 
-<body>
-
+<body class="loading-overlay-showing" data-loading-overlay data-plugin-options="{'hideDelay': 300}">
+    <div class="loading-overlay">
+        <div class="bounce-loader">
+            <div class="bounce1"></div>
+            <div class="bounce2"></div>
+            <div class="bounce3"></div>
+        </div>
+    </div>
     <div class="body">
         <header id="header" data-plugin-options="{'stickyEnabled': true, 'stickyEnableOnBoxed': true, 'stickyEnableOnMobile': true, 'stickyStartAt': 45, 'stickySetTop': '-45px', 'stickyChangeLogo': true}">
             <div class="header-body">
@@ -78,10 +84,10 @@
                                 <nav class="header-nav-top">
                                     <ul class="nav nav-pills">
                                         <li class="nav-item nav-item-anim-icon d-none d-md-block">
-                                            <a class="nav-link pl-0" href="javascript:void(0)"><i class="fas fa-angle-right"></i> Tentang Kami</a>
+                                            <a class="nav-link pl-0 font-weight-bold" href="javascript:void(0)"><i class="fas fa-angle-right"></i> Tentang Kami</a>
                                         </li>
                                         <li class="nav-item nav-item-anim-icon d-none d-md-block">
-                                            <a class="nav-link" href="javascript:void(0)"><i class="fas fa-angle-right"></i> Hubungi Kami</a>
+                                            <a class="nav-link font-weight-bold" href="javascript:void(0)"><i class="fas fa-angle-right"></i> Hubungi Kami</a>
                                         </li>
                                         <li class="nav-item nav-item-left-border nav-item-left-border-remove nav-item-left-border-md-show">
                                             <span class="ws-nowrap"><i class="fas fa-phone"></i> (0431) 821 821</span>
@@ -90,12 +96,12 @@
                                 </nav>
                             </div>
                             <div class="header-row">
-                                <div class="header-nav header-nav-links header-nav-click-to-open">
-                                    <div class="header-nav-main header-nav-main-square">
+                                <div class="header-nav header-nav-links">
+                                    <div class="header-nav-main header-nav-main-clone-items header-nav-main-slide header-nav-main-square header-nav-main-effect-2 header-nav-main-sub-effect-1">
                                         <nav class="collapse">
                                             <ul class="nav nav-pills" id="mainNav">
                                                 <li class="dropdown">
-                                                    <a class="dropdown-item dropdown-toggle <?= $index != "home" ?: "active" ?>" href="<?= base_url() ?>">Home</a>
+                                                    <a class="dropdown-item dropdown-toggle <?= $index != "home" ?: "active" ?>" href="<?= base_url() ?>">Beranda</a>
                                                 </li>
                                                 <li class="dropdown">
                                                     <a class="dropdown-item dropdown-toggle <?= $index != "produk" ?: "active" ?>" href="<?= base_url("produk") ?>">Produk</a>
@@ -105,6 +111,9 @@
                                                 </li>
                                                 <li class="dropdown">
                                                     <a class="dropdown-item dropdown-toggle <?= $index != "promo" ?: "active" ?>" href="<?= base_url("promo") ?>">Promo</a>
+                                                </li>
+                                                <li class="dropdown">
+                                                    <a class="dropdown-item dropdown-toggle <?= $index != "promo" ?: "active" ?>" href="<?= base_url("promo") ?>">Simulasi Harga</a>
                                                 </li>
                                             </ul>
                                         </nav>
@@ -192,13 +201,13 @@
                                 </a>
                             </div>
                             <div class="col-lg-7 d-flex align-items-center justify-content-center justify-content-lg-start mb-4 mb-lg-0">
-                                <p class="text-color-light">© Copyright 2020. IT Kumala Group.</p>
+                                <p class="text-color-light font-weight-bold">© Copyright 2020. IT Kumala Group.</p>
                             </div>
                             <div class="col-lg-4 d-flex align-items-center justify-content-center justify-content-lg-end">
                                 <nav id="sub-menu">
                                     <ul>
-                                        <li class="border-0"><i class="fas fa-angle-right text-color-light"></i><a href="javascript:void(0)" class="ml-1 text-decoration-none text-color-light"> FAQ's</a></li>
-                                        <li class="border-0"><i class="fas fa-angle-right text-color-light"></i><a href="javascript:void(0)" class="ml-1 text-decoration-none text-color-light"> Hubungi Kami</a></li>
+                                        <li class="border-0"><i class="fas fa-angle-right text-color-light"></i><a href="javascript:void(0)" class="ml-1 text-decoration-none text-color-light font-weight-bold"> FAQ's</a></li>
+                                        <li class="border-0"><i class="fas fa-angle-right text-color-light"></i><a href="javascript:void(0)" class="ml-1 text-decoration-none text-color-light font-weight-bold"> Hubungi Kami</a></li>
                                     </ul>
                                 </nav>
                             </div>
