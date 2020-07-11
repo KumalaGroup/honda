@@ -1,0 +1,21 @@
+/* Add here all your CSS customizations */
+.scroll-to-top {
+    display: none !important;
+}
+#whats {
+    position        : fixed !important;
+    width           : 60px !important;
+    height          : 60px !important;
+    bottom          : 95px !important;
+    right           : 20px !important;
+    background-color: #0C9 !important;
+    color           : #FFF !important;
+    border-radius   : 50px !important;
+    text-align      : center !important;
+    box-shadow      : 2px 2px 3px #999 !important;
+    font-size       : 30px !important;
+}
+
+.whats {
+    margin-top: 15px !important;
+}

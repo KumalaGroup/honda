@@ -1,42 +1,248 @@
 <!DOCTYPE html>
-<html lang="en">
+<html>
 
 <head>
-    <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-    <meta name="description" content="">
-    <meta name="author" content="">
+
+    <!-- Basic -->
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+
     <title>Honda KMG</title>
-    <link href="<?= base_url() ?>/assets/baru/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
-    <link href="<?= base_url() ?>/assets/baru/vendor/fontawesome-free/css/all.min.css" rel="stylesheet" type="text/css">
-    <link href="https://fonts.googleapis.com/css?family=Montserrat:400,700" rel="stylesheet" type="text/css">
-    <link rel="apple-touch-icon" sizes="57x57" href="<?= base_url() ?>/assets/images/favicon/apple-icon-57x57.png">
-    <link rel="apple-touch-icon" sizes="60x60" href="<?= base_url() ?>/assets/images/favicon/apple-icon-60x60.png">
-    <link rel="apple-touch-icon" sizes="72x72" href="<?= base_url() ?>/assets/images/favicon/apple-icon-72x72.png">
-    <link rel="apple-touch-icon" sizes="76x76" href="<?= base_url() ?>/assets/images/favicon/apple-icon-76x76.png">
-    <link rel="apple-touch-icon" sizes="114x114" href="<?= base_url() ?>/assets/images/favicon/apple-icon-114x114.png">
-    <link rel="apple-touch-icon" sizes="120x120" href="<?= base_url() ?>/assets/images/favicon/apple-icon-120x120.png">
-    <link rel="apple-touch-icon" sizes="144x144" href="<?= base_url() ?>/assets/images/favicon/apple-icon-144x144.png">
-    <link rel="apple-touch-icon" sizes="152x152" href="<?= base_url() ?>/assets/images/favicon/apple-icon-152x152.png">
-    <link rel="apple-touch-icon" sizes="180x180" href="<?= base_url() ?>/assets/images/favicon/apple-icon-180x180.png">
-    <link rel="icon" type="image/png" sizes="192x192" href="<?= base_url() ?>/assets/baru/img/logo_honda.png">
-    <link rel="icon" type="image/png" sizes="32x32" href="<?= base_url() ?>/assets/baru/img/logo_honda.png">
-    <link rel="icon" type="image/png" sizes="96x96" href="<?= base_url() ?>/assets/baru/img/logo_honda.png">
-    <link rel="icon" type="image/png" sizes="16x16" href="<?= base_url() ?>/assets/baru/img/logo_honda.png">
-    <link rel="manifest" href="<?= base_url() ?>/assets/images/favicon/manifest.json">
-    <meta name="msapplication-TileColor" content="#ffffff">
-    <meta name="msapplication-TileImage" content="<?= base_url() ?>/assets/images/favicon/ms-icon-144x144.png">
-    <meta name="theme-color" content="#ffffff">
-    <link href="<?= base_url() ?>/assets/baru/vendor/magnific-popup/magnific-popup.css" rel="stylesheet" type="text/css">
-    <link rel="stylesheet" href="<?= base_url() ?>/assets/css/bootstrap.css">
-    <link rel="stylesheet" href="<?= base_url() ?>/assets/css/animate.css">
-    <link href="<?= base_url() ?>/assets/baru/css/freelancer.min.css" rel="stylesheet">
-    <link rel="stylesheet" href="<?= base_url() ?>/assets/baru/owlcarousel/dist/assets/owl.carousel.min.css">
-    <link rel="stylesheet" href="<?= base_url() ?>/assets/baru/owlcarousel/dist/assets/owl.theme.default.min.css">
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
-    <link href="<?= base_url() ?>/assets/baru/datepicker.css" rel="stylesheet">
-    <script src="<?= base_url() ?>/assets/baru/bootstrap-datepicker.js"></script>
-    <script src="<?= base_url() ?>/assets/baru/owlcarousel/dist/owl.carousel.min.js"></script>
+
+    <meta name="keywords" content="honda, honda kmg, honda-kmg, kumala group" />
+    <meta name="description" content="">
+    <meta name="author" content="it kumala group">
+
+    <!-- Favicon -->
+    <link rel="shortcut icon" href="image/logo.png" type="image/x-icon" />
+    <link rel="apple-touch-icon" href="image/apple-touch-icon.png">
+
+    <!-- Mobile Metas -->
+    <meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1.0, shrink-to-fit=no">
+
+    <!-- Web Fonts  -->
+    <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,400,600,700,800%7CShadows+Into+Light" rel="stylesheet" type="text/css">
+
+    <!-- Vendor CSS -->
+    <link rel="stylesheet" href="vendor/bootstrap/css/bootstrap.min.css">
+    <link rel="stylesheet" href="vendor/fontawesome-free/css/all.min.css">
+    <link rel="stylesheet" href="vendor/animate/animate.min.css">
+    <link rel="stylesheet" href="vendor/simple-line-icons/css/simple-line-icons.min.css">
+    <link rel="stylesheet" href="vendor/owl.carousel/assets/owl.carousel.min.css">
+    <link rel="stylesheet" href="vendor/owl.carousel/assets/owl.theme.default.min.css">
+    <link rel="stylesheet" href="vendor/magnific-popup/magnific-popup.min.css">
+
+    <!-- Theme CSS -->
+    <link rel="stylesheet" href="css/theme.css">
+    <link rel="stylesheet" href="css/theme-elements.css">
+    <link rel="stylesheet" href="css/theme-blog.css">
+    <link rel="stylesheet" href="css/theme-shop.css">
+
+    <!-- Current Page CSS -->
+    <link rel="stylesheet" href="vendor/rs-plugin/css/settings.css">
+    <link rel="stylesheet" href="vendor/rs-plugin/css/layers.css">
+    <link rel="stylesheet" href="vendor/rs-plugin/css/navigation.css">
+    <link rel="stylesheet" href="vendor/circle-flip-slideshow/css/component.css">
+
+    <!-- Demo CSS -->
+
+
+    <!-- Skin CSS -->
+    <link rel="stylesheet" href="css/skins/default.css">
+
+    <!-- Theme Custom CSS -->
+    <link rel="stylesheet" href="css/custom.css">
+
+    <!-- Head Libs -->
+    <script src="vendor/modernizr/modernizr.min.js"></script>
+</head>
+
+<body>
+
+    <div class="body">
+        <header id="header" data-plugin-options="{'stickyEnabled': true, 'stickyEnableOnBoxed': true, 'stickyEnableOnMobile': true, 'stickyStartAt': 45, 'stickySetTop': '-45px', 'stickyChangeLogo': true}">
+            <div class="header-body">
+                <div class="header-container container">
+                    <div class="header-row">
+                        <div class="header-column">
+                            <div class="header-row">
+                                <div class="header-logo">
+                                    <a href="<?= base_url() ?>">
+                                        <img class="opacity-8" alt="Porto" width="auto" height="70" data-sticky-width="auto" data-sticky-height="40" data-sticky-top="35" src="image/logo.png">
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="header-column justify-content-end">
+                            <div class="header-row pt-3">
+                                <nav class="header-nav-top">
+                                    <ul class="nav nav-pills">
+                                        <li class="nav-item nav-item-anim-icon d-none d-md-block">
+                                            <a class="nav-link pl-0" href="javascript:void(0)"><i class="fas fa-angle-right"></i> Tentang Kami</a>
+                                        </li>
+                                        <li class="nav-item nav-item-anim-icon d-none d-md-block">
+                                            <a class="nav-link" href="javascript:void(0)"><i class="fas fa-angle-right"></i> Hubungi Kami</a>
+                                        </li>
+                                        <li class="nav-item nav-item-left-border nav-item-left-border-remove nav-item-left-border-md-show">
+                                            <span class="ws-nowrap"><i class="fas fa-phone"></i> (0431) 821 821</span>
+                                        </li>
+                                    </ul>
+                                </nav>
+                            </div>
+                            <div class="header-row">
+                                <div class="header-nav header-nav-links header-nav-click-to-open">
+                                    <div class="header-nav-main header-nav-main-square">
+                                        <nav class="collapse">
+                                            <ul class="nav nav-pills" id="mainNav">
+                                                <li class="dropdown">
+                                                    <a class="dropdown-item dropdown-toggle <?= $index != "home" ?: "active" ?>" href="<?= base_url() ?>">Home</a>
+                                                </li>
+                                                <li class="dropdown">
+                                                    <a class="dropdown-item dropdown-toggle <?= $index != "produk" ?: "active" ?>" href="<?= base_url("produk") ?>">Produk</a>
+                                                </li>
+                                                <li class="dropdown">
+                                                    <a class="dropdown-item dropdown-toggle <?= $index != "berita" ?: "active" ?>" href="<?= base_url("berita") ?>">Berita</a>
+                                                </li>
+                                                <li class="dropdown">
+                                                    <a class="dropdown-item dropdown-toggle <?= $index != "promo" ?: "active" ?>" href="<?= base_url("promo") ?>">Promo</a>
+                                                </li>
+                                            </ul>
+                                        </nav>
+                                    </div>
+                                    <div class="header-nav-features">
+                                        <div class="header-nav-feature header-nav-features-search d-inline-flex">
+                                            <ul class="social-icons">
+                                                <li class="social-icons-facebook"><a href="https://www.facebook.com/HondaKumalaGroup" target="_blank" title="Facebook"><i class="fab fa-facebook-f"></i></a></li>
+                                                <li class="social-icons-instagram"><a href="https://www.instagram.com/honda_kmg/?hl=en" target="_blank" title="Instagram"><i class="fab fa-instagram"></i></a></li>
+                                                <li class="social-icons-youtube"><a href="https://www.youtube.com/channel/UC7R09sGLSsz-Ky1nQs1Qbiw" target="_blank" title="Youtube"><i class="fab fa-youtube"></i></a></li>
+                                            </ul>
+                                        </div>
+                                    </div>
+                                    <button class="btn header-btn-collapse-nav" data-toggle="collapse" data-target=".header-nav-main nav">
+                                        <i class="fas fa-bars"></i>
+                                    </button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </header>
+
+        <div role="main" class="main">
+            <?= view("$content") ?>
+        </div>
+
+        <footer id="footer" class="bg-color-quaternary border-top-0 mt-0">
+            <div class="container appear-animation" data-appear-animation="slideInUp" data-appear-animation-delay="0" data-appear-animation-duration="1s">
+                <div class="row py-5">
+                    <div class="col-sm-6 col-md-12 col-lg-4 mb-5 mb-lg-0">
+                        <h4 class="font-weight-normal mb-1"><strong class="font-weight-extra-bold">Honda KMG</strong> Manado</h4>
+                        <h5>PT. Kumala Motor Cemerlang</h5>
+                        <hr>
+                        <p class="m-0 text-color-light">JL. Raya Manado - Tomohon KM 7, Winangun Atas
+                            Pineleng, Minahasa, Sulawesi Utara
+                            95661</p>
+                    </div>
+                    <div class="col-sm-6 col-md-4 col-lg-3 mb-md-0">
+                        <h4 class="font-weight-normal mb-3"><strong class="font-weight-extra-bold">Hubungi</strong> Kami</h4>
+                        <ul class="list list-icons list-icons-lg">
+                            <li class="mb-1"><i class="fas fa-phone text-color-light"></i>
+                                <p class="m-0"><a class="text-color-light" href="tel:0431821821">(0431) 821 821</a></p>
+                            </li>
+                            <li class="mb-1"><i class="fab fa-whatsapp text-color-light"></i>
+                                <p class="m-0"><a class="text-color-light" href="https://api.whatsapp.com/send?phone=6281388217676">0813-8821-7676</a></p>
+                            </li>
+                            <li class="mb-1"><i class="far fa-envelope text-color-light"></i>
+                                <p class="m-0"><a class="text-color-light" href="mailto:honda@honda-kmg.com">honda@honda-kmg.com</a></p>
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="col-sm-6 col-md-4 col-lg-3 mb-md-0">
+                        <h4 class="font-weight-normal mb-3">Jam <strong class="font-weight-extra-bold">Operasional</strong></h4>
+                        <ul class="list list-icons list-icons-lg">
+                            <li class="mb-1"><i class="far fa-clock text-color-light"></i>
+                                <p class="m-0 text-color-light">Senin - Jumat : 08.30 - 19.00</p>
+                            </li>
+                            <li class="mb-1"><i class="far fa-clock text-color-light"></i>
+                                <p class="m-0 text-color-light">Sabtu : 08.30 - 17.00</p>
+                            </li>
+                            <li class="mb-1"><i class="far fa-clock text-color-light"></i>
+                                <p class="m-0 text-color-light">Minggu : 11.00 - 16.00</p>
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="col-sm-6 col-md-4 col-lg-2">
+                        <h4 class="font-weight-normal mb-3">Social <strong class="font-weight-extra-bold">Media</strong></h4>
+                        <ul class="social-icons">
+                            <li class="social-icons-facebook"><a href="https://www.facebook.com/HondaKumalaGroup" target="_blank" title="Facebook"><i class="fab fa-facebook-f"></i></a></li>
+                            <li class="social-icons-instagram"><a href="https://www.instagram.com/honda_kmg/?hl=en" target="_blank" title="Instagram"><i class="fab fa-instagram"></i></a></li>
+                            <li class="social-icons-youtube"><a href="https://www.youtube.com/channel/UC7R09sGLSsz-Ky1nQs1Qbiw" target="_blank" title="Youtube"><i class="fab fa-youtube"></i></a></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            <div class="footer-copyright bg-color-quaternary bg-color-scale-overlay bg-color-scale-overlay-1">
+                <div class="bg-color-scale-overlay-wrapper">
+                    <div class="container">
+                        <div class="row py-4">
+                            <div class="col-lg-1 d-flex align-items-center justify-content-center justify-content-lg-start mb-2 mb-lg-0">
+                                <a href="<?= base_url() ?>" class="logo pr-0 pr-lg-3">
+                                    <img class="opacity-8" alt="Honda" src="image/logo.png" height="33">
+                                </a>
+                            </div>
+                            <div class="col-lg-7 d-flex align-items-center justify-content-center justify-content-lg-start mb-4 mb-lg-0">
+                                <p class="text-color-light">© Copyright 2020. IT Kumala Group.</p>
+                            </div>
+                            <div class="col-lg-4 d-flex align-items-center justify-content-center justify-content-lg-end">
+                                <nav id="sub-menu">
+                                    <ul>
+                                        <li class="border-0"><i class="fas fa-angle-right text-color-light"></i><a href="javascript:void(0)" class="ml-1 text-decoration-none text-color-light"> FAQ's</a></li>
+                                        <li class="border-0"><i class="fas fa-angle-right text-color-light"></i><a href="javascript:void(0)" class="ml-1 text-decoration-none text-color-light"> Hubungi Kami</a></li>
+                                    </ul>
+                                </nav>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </footer>
+    </div>
+    <a href="https://api.whatsapp.com/send?phone=6281388217676" id="whats" class="z-index-3" target="_blank"> <i class="fab fa-whatsapp whats"></i> </a>
+
+    <!-- Vendor -->
+    <script src="vendor/jquery/jquery.min.js"></script>
+    <script src="vendor/jquery.appear/jquery.appear.min.js"></script>
+    <script src="vendor/jquery.easing/jquery.easing.min.js"></script>
+    <script src="vendor/jquery.cookie/jquery.cookie.min.js"></script>
+    <script src="vendor/popper/umd/popper.min.js"></script>
+    <script src="vendor/bootstrap/js/bootstrap.min.js"></script>
+    <script src="vendor/common/common.min.js"></script>
+    <script src="vendor/jquery.validation/jquery.validate.min.js"></script>
+    <script src="vendor/jquery.easy-pie-chart/jquery.easypiechart.min.js"></script>
+    <script src="vendor/jquery.gmap/jquery.gmap.min.js"></script>
+    <script src="vendor/jquery.lazyload/jquery.lazyload.min.js"></script>
+    <script src="vendor/isotope/jquery.isotope.min.js"></script>
+    <script src="vendor/owl.carousel/owl.carousel.min.js"></script>
+    <script src="vendor/magnific-popup/jquery.magnific-popup.min.js"></script>
+    <script src="vendor/vide/jquery.vide.min.js"></script>
+    <script src="vendor/vivus/vivus.min.js"></script>
+
+    <!-- Theme Base, Components and Settings -->
+    <script src="js/theme.js"></script>
+
+    <!-- Current Page Vendor and Views -->
+    <script src="vendor/rs-plugin/js/jquery.themepunch.tools.min.js"></script>
+    <script src="vendor/rs-plugin/js/jquery.themepunch.revolution.min.js"></script>
+    <script src="vendor/circle-flip-slideshow/js/jquery.flipshow.min.js"></script>
+    <script src="js/views/view.home.js"></script>
+
+    <!-- Theme Custom -->
+    <script src="js/custom.js"></script>
+
+    <!-- Theme Initialization Files -->
+    <script src="js/theme.init.js"></script>
+
     <script>
         (function(w, d, s, l, i) {
             w[l] = w[l] || [];
@@ -52,272 +258,7 @@
             f.parentNode.insertBefore(j, f);
         })(window, document, 'script', 'dataLayer', 'GTM-WSN4ZX4');
     </script>
-</head>
-<style>
-    #mainNav a {
-        font-size: 11pt;
-    }
 
-    /* tambahan */
-    #top-search {
-        float: left;
-        margin: -13px 0 0 15px;
-    }
-
-    #top-search a {
-        text-decoration: none;
-    }
-
-    #top-search .lang-button span {
-        display: block;
-        float: left;
-        width: 30px;
-        text-align: center;
-        color: #FA0F0c;
-        height: 28px;
-    }
-
-    #top-search .lang-button span {
-        height: 30px !important;
-        line-height: 30px !important;
-        border: 1px solid #FA0F0c;
-        margin-top: 15px;
-        display: block;
-    }
-
-    #top-search .lang-button span.active {
-        background: #FA0F0c;
-        color: #fff;
-    }
-
-    #top-search .clear {
-        clear: both;
-    }
-
-    .card_bods {
-        border-left: 1px solid rgba(0, 0, 0, .125) !important;
-        border-bottom: 1px solid rgba(0, 0, 0, .125) !important;
-        border-right: 1px solid rgba(0, 0, 0, .125) !important;
-        border-top: 5px solid #FA0F0c !important;
-    }
-
-    #berita .card {
-        border-top: 1px solid rgba(0, 0, 0, .125) !important;
-        border-bottom: 1px solid rgba(0, 0, 0, .125) !important;
-        border-right: 1px solid rgba(0, 0, 0, .125) !important;
-        border-left: 5px solid #FA0F0c !important;
-    }
-
-    .hovereffect {
-        width: 100%;
-        height: 100%;
-        float: left;
-        overflow: hidden;
-        position: relative;
-        text-align: center;
-        cursor: default;
-    }
-
-    .hovereffect .overlay {
-        width: 100%;
-        height: 100%;
-        position: absolute;
-        overflow: hidden;
-        top: 0;
-        left: 0;
-    }
-
-    .hovereffect img {
-        display: block;
-        position: relative;
-        height: 120%;
-        -webkit-transition: all 0.4s ease-in;
-        transition: all 0.4s ease-in;
-    }
-
-    .hovereffect:hover img {
-        filter: url('data:image/svg+xml;charset=utf-8,<svg xmlns="http://www.w3.org/2000/svg"><filter id="filter"><feColorMatrix type="matrix" color-interpolation-filters="sRGB" values="0.2126 0.7152 0.0722 0 0 0.2126 0.7152 0.0722 0 0 0.2126 0.7152 0.0722 0 0 0 0 0 1 0"/><feGaussianBlur stdDeviation="3"/></filter></svg>#filter');
-        filter: grayscale(1) blur(3px);
-        -webkit-filter: grayscale(1) blur(3px);
-        -webkit-transform: scale(1.2);
-        -ms-transform: scale(1.2);
-        transform: scale(1.2);
-    }
-
-    .hovereffect h2 {
-        text-transform: uppercase;
-        text-align: center;
-        position: relative;
-        font-size: 17px;
-        padding: 10px;
-        background: #FA0F0c;
-    }
-
-    .hovereffect a.info {
-        display: inline-block;
-        text-decoration: none;
-        padding: 9px 18px;
-        border: 1px solid #FA0F0c;
-        margin: 50px 0 0 0;
-        background-color: transparent;
-    }
-
-    .hovereffect a.info:hover {
-        box-shadow: 0 0 5px #FA0F0c;
-    }
-
-    .hovereffect a.info,
-    .hovereffect h2 {
-        -webkit-transform: scale(0.7);
-        -ms-transform: scale(0.7);
-        transform: scale(0.7);
-        -webkit-transition: all 0.4s ease-in;
-        transition: all 0.4s ease-in;
-        opacity: 0;
-        filter: alpha(opacity=0);
-        color: #fff;
-        text-transform: uppercase;
-    }
-
-    .hovereffect:hover a.info,
-    .hovereffect:hover h2 {
-        opacity: 1;
-        filter: alpha(opacity=100);
-        -webkit-transform: scale(1);
-        -ms-transform: scale(1);
-        transform: scale(1);
-    }
-
-    #partner img {
-        width: 250px;
-        height: 150px;
-    }
-
-    header .masthead {
-        padding-top: calc(3rem + 52px) !important;
-        margin-top: 50px !important;
-    }
-
-    @media (min-width: 992px) {
-        #mainNav {
-            padding-top: 0.8rem;
-            padding-bottom: 0.8rem;
-            -webkit-transition: padding-top 0.3s, padding-bottom 0.3s;
-            transition: padding-top 0.3s, padding-bottom 0.3s;
-        }
-
-        .carousel-item img {
-            height: 90vh;
-        }
-    }
-
-    /* begin:: floating bottom */
-    #toppp {
-        position: fixed;
-        width: 60px;
-        height: 60px;
-        bottom: 170px;
-        right: 20px;
-    }
-
-    .float {
-        position: fixed;
-        width: 60px;
-        height: 60px;
-        bottom: 95px;
-        right: 20px;
-        background-color: #0C9;
-        color: #FFF;
-        border-radius: 50px;
-        text-align: center;
-        box-shadow: 2px 2px 3px #999;
-        font-size: 30px;
-    }
-
-    .my-float {
-        margin-top: 15px;
-    }
-
-    .error {
-        padding-top: 5px;
-        color: red;
-    }
-
-    /* end:: floating bottom */
-</style>
-
-<body id="page-top">
-    <nav class="navbar navbar-expand-lg bg-secondary shadow fixed-top" id="mainNav"> <a href="<?= base_url() ?>"><img src="<?= base_url() ?>/assets/baru/img/logo_honda.png" style="margin-left: 15px;" alt="Logo" width="auto" height="60px"></a> <button class="navbar-toggler navbar-toggler-right bg-primary text-white rounded" type="button" data-toggle="collapse" data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation"> Menu <i class="fas fa-bars"></i> </button>
-        <div class="collapse navbar-collapse" id="navbarResponsive">
-            <ul class="navbar-nav ml-auto">
-                <!-- <li class="nav-item mx-0 mx-lg-1"> <a class="nav-link py-3 px-0 px-lg-3 rounded js-scroll-trigger <?= ($index == 'index') ? 'active' : '' ?>" href="javascript:void(0)">Beranda</a> </li><li class="nav-item mx-0 mx-lg-1"> <a class="nav-link py-3 px-0 px-lg-3 rounded js-scroll-trigger <?= ($index == 'tentang') ? 'active' : '' ?>" href="javascript:void(0)">Tentang Kami</a> </li><li class="nav-item mx-0 mx-lg-1"> <a class="nav-link py-3 px-0 px-lg-3 rounded js-scroll-trigger active" href="<?= base_url() ?>">Produk</a> </li><li class="nav-item mx-0 mx-lg-1"> <a class="nav-link py-3 px-0 px-lg-3 rounded js-scroll-trigger <?= ($index == 'berita') ? 'active' : '' ?>" href="javascript:void(0)">Berita</a> </li><li class="nav-item mx-0 mx-lg-1"> <a class="nav-link py-3 px-0 px-lg-3 rounded js-scroll-trigger <?= ($index == 'karir') ? 'active' : '' ?>" href="javascript:void(0)">Karir</a> </li>-->
-                <li class="nav-item mx-0 mx-lg-1"> <a class="nav-link py-3 px-0 px-lg-3 rounded js-scroll-trigger <?= ($index == 'kontak') ? 'active' : '' ?>" href="<?= base_url() ?>/kontak">Kontak</a> </li>
-            </ul>
-            <div id="top-search"> <a href="javascript:void(0)" class="lang-button"> <span class="active">ID</span> <span>EN</span> <i class="clear"></i> </a> </div>
-        </div>
-    </nav> <?= view("$content") ?> <footer class="footer">
-        <div class="container">
-            <div class="row">
-                <div class="col-md-4 mb-5 mb-lg-0">
-                    <h5>HONDA KMG MANADO</h5>
-                    <h6>PT. Kumala Motor Cemerlang</h6>
-                    <hr class="my-4">
-                    <p>JL. Raya Manado - Tomohon KM 7, Winangun Atas <br>
-                        Pineleng, Minahasa, Sulawesi Utara <br>
-                        95661</p>
-                </div>
-                <div class="col-md-4 mb-5 mb-lg-0">
-                    <h5>Info Layanan</h5>
-                    <hr>
-                    <p>Telp &nbsp;&nbsp;&nbsp;&nbsp;: (0431) 821 821 <br>
-                        WA &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;: 0813 8821 7676 <br>
-                        Email &nbsp;: honda@honda-kmg.com</p>
-                    <hr>
-                    <h6>Jam Operasional :</h6>
-                    <p>Senin - Jumat : 08.30 - 19.00 <br>
-                        Sabtu : 08.30 - 17.00 <br>
-                        Minggu : 11.00 - 16.00</p>
-                </div>
-                <div class="col-md-4 mb-5 mb-lg-0">
-                    <h5 class="mb-4">IKUTI KAMI</h5>
-                    <p>Ayo Ikuti Sosial Media Kami</p>
-                    <ul class="list-inline mb-0">
-                        <li class="list-inline-item"> <a class="btn btn-outline-light btn-social text-center rounded-circle" href="https://www.facebook.com/HondaKumalaGroup" target="_blank"> <i class="fab fa-fw fa-facebook-f"></i> </a> </li>
-                        <li class="list-inline-item"> <a class="btn btn-outline-light btn-social text-center rounded-circle" href="https://www.instagram.com/honda_kmg/?hl=en" target="_blank"> <i class="fab fa-fw fa-instagram"></i> </a> </li>
-                        <li class="list-inline-item"> <a class="btn btn-outline-light btn-social text-center rounded-circle" href="https://www.youtube.com/channel/UC7R09sGLSsz-Ky1nQs1Qbiw" target="_blank"> <i class="fab fa-fw fa-youtube"></i> </a> </li>
-                    </ul>
-                </div>
-            </div>
-        </div>
-    </footer><!-- <div class="copyright py-4 text-center text-white"> <div class="container"> <small>Copyright &copy; Your Website 2018</small> </div></div>-->
-    <div class="scroll-to-top d-lg-none" id="toppp"> <a class="js-scroll-trigger d-block text-center text-white rounded" href="#page-top"> <i class="fa fa-chevron-up"></i> </a> </div><a href="https://api.whatsapp.com/send?phone=6281388217676" class="float" target="_blank"> <i class="fab fa-whatsapp my-float"></i> </a>
-    <script src="<?= base_url() ?>/assets/baru/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
-    <script src="<?= base_url() ?>/assets/baru/vendor/bootstrap/js/bootstrap.js"></script>
-    <script src="<?= base_url() ?>/assets/baru/vendor/jquery-easing/jquery.easing.min.js"></script>
-    <script src="<?= base_url() ?>/assets/baru/vendor/magnific-popup/jquery.magnific-popup.min.js"></script>
-    <script src="<?= base_url() ?>/assets/baru/js/jqBootstrapValidation.js"></script>
-    <script src="<?= base_url() ?>/assets/baru/js/contact_me.js"></script>
-    <script src="<?= base_url() ?>/assets/baru/js/freelancer.min.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-validate/1.19.2/jquery.validate.min.js"></script>
-    <script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
-    <script type="text/javascript">
-        function input_number(e) {
-            if ($.inArray(e.which, [187, 107, 8, 37, 39, 46, 190]) != -1) return;
-            else if ((e.which < 48 || e.which > 57) && (e.which < 96 || e.which > 105)) e.preventDefault();
-        } /* Fungsi formatRupiah */
-        function formatRupiah(angka) {
-            var number_string = angka.replace(/[^,\d]/g, '').toString(),
-                split = number_string.split(','),
-                sisa = split[0].length % 3,
-                rupiah = split[0].substr(0, sisa),
-                ribuan = split[0].substr(sisa).match(/\d{3}/gi);
-            if (ribuan) {
-                separator = sisa ? '.' : '';
-                rupiah += separator + ribuan.join('.');
-            }
-            return rupiah;
-        }
-    </script>
     <script type="text/javascript">
         var Tawk_API = Tawk_API || {},
             Tawk_LoadStart = new Date();
