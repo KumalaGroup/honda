@@ -84,10 +84,10 @@
                                 <nav class="header-nav-top">
                                     <ul class="nav nav-pills">
                                         <li class="nav-item nav-item-anim-icon d-none d-md-block">
-                                            <a class="nav-link pl-0 font-weight-bold" href="javascript:void(0)"><i class="fas fa-angle-right"></i> Tentang Kami</a>
+                                            <a class="nav-link pl-0 font-weight-bold" href="<?= base_url("tentang") ?>"><i class="fas fa-angle-right"></i> Tentang Kami</a>
                                         </li>
                                         <li class="nav-item nav-item-anim-icon d-none d-md-block">
-                                            <a class="nav-link font-weight-bold" href="javascript:void(0)"><i class="fas fa-angle-right"></i> Hubungi Kami</a>
+                                            <a class="nav-link font-weight-bold" href="<?= base_url("hubungi") ?>"><i class="fas fa-angle-right"></i> Hubungi Kami</a>
                                         </li>
                                         <li class="nav-item nav-item-left-border nav-item-left-border-remove nav-item-left-border-md-show">
                                             <span class="ws-nowrap"><i class="fas fa-phone"></i> (0431) 821 821</span>
@@ -113,7 +113,7 @@
                                                     <a class="dropdown-item dropdown-toggle <?= $index != "promo" ?: "active" ?>" href="<?= base_url("promo") ?>">Promo</a>
                                                 </li>
                                                 <li class="dropdown">
-                                                    <a class="dropdown-item dropdown-toggle <?= $index != "promo" ?: "active" ?>" href="<?= base_url("promo") ?>">Simulasi Harga</a>
+                                                    <a class="dropdown-item dropdown-toggle" href="javascript:void(0)">Simulasi Harga</a>
                                                 </li>
                                             </ul>
                                         </nav>
@@ -142,74 +142,76 @@
             <?= view("$content") ?>
         </div>
 
-        <footer id="footer" class="bg-color-quaternary border-top-0 mt-0">
-            <div class="container appear-animation" data-appear-animation="slideInUp" data-appear-animation-delay="0" data-appear-animation-duration="1s">
-                <div class="row py-5">
-                    <div class="col-sm-6 col-md-12 col-lg-4 mb-5 mb-lg-0">
-                        <h4 class="font-weight-normal mb-1"><strong class="font-weight-extra-bold">Honda KMG</strong> Manado</h4>
-                        <h5>PT. Kumala Motor Cemerlang</h5>
-                        <hr>
-                        <p class="m-0 text-color-light">JL. Raya Manado - Tomohon KM 7, Winangun Atas
-                            Pineleng, Minahasa, Sulawesi Utara
-                            95661</p>
-                    </div>
-                    <div class="col-sm-6 col-md-4 col-lg-3 mb-md-0">
-                        <h4 class="font-weight-normal mb-3"><strong class="font-weight-extra-bold">Hubungi</strong> Kami</h4>
-                        <ul class="list list-icons list-icons-lg">
-                            <li class="mb-1"><i class="fas fa-phone text-color-light"></i>
-                                <p class="m-0"><a class="text-color-light" href="tel:0431821821">(0431) 821 821</a></p>
-                            </li>
-                            <li class="mb-1"><i class="fab fa-whatsapp text-color-light"></i>
-                                <p class="m-0"><a class="text-color-light" href="https://api.whatsapp.com/send?phone=6281388217676">0813-8821-7676</a></p>
-                            </li>
-                            <li class="mb-1"><i class="far fa-envelope text-color-light"></i>
-                                <p class="m-0"><a class="text-color-light" href="mailto:honda@honda-kmg.com">honda@honda-kmg.com</a></p>
-                            </li>
-                        </ul>
-                    </div>
-                    <div class="col-sm-6 col-md-4 col-lg-3 mb-md-0">
-                        <h4 class="font-weight-normal mb-3">Jam <strong class="font-weight-extra-bold">Operasional</strong></h4>
-                        <ul class="list list-icons list-icons-lg">
-                            <li class="mb-1"><i class="far fa-clock text-color-light"></i>
-                                <p class="m-0 text-color-light">Senin - Jumat : 08.30 - 19.00</p>
-                            </li>
-                            <li class="mb-1"><i class="far fa-clock text-color-light"></i>
-                                <p class="m-0 text-color-light">Sabtu : 08.30 - 17.00</p>
-                            </li>
-                            <li class="mb-1"><i class="far fa-clock text-color-light"></i>
-                                <p class="m-0 text-color-light">Minggu : 11.00 - 16.00</p>
-                            </li>
-                        </ul>
-                    </div>
-                    <div class="col-sm-6 col-md-4 col-lg-2">
-                        <h4 class="font-weight-normal mb-3">Social <strong class="font-weight-extra-bold">Media</strong></h4>
-                        <ul class="social-icons">
-                            <li class="social-icons-facebook"><a href="https://www.facebook.com/HondaKumalaGroup" target="_blank" title="Facebook"><i class="fab fa-facebook-f"></i></a></li>
-                            <li class="social-icons-instagram"><a href="https://www.instagram.com/honda_kmg/?hl=en" target="_blank" title="Instagram"><i class="fab fa-instagram"></i></a></li>
-                            <li class="social-icons-youtube"><a href="https://www.youtube.com/channel/UC7R09sGLSsz-Ky1nQs1Qbiw" target="_blank" title="Youtube"><i class="fab fa-youtube"></i></a></li>
-                        </ul>
+        <footer id="footer" class="section section-angeled bg-color-quaternary border-top-0 mt-0">
+            <div class="section-angled-content">
+                <div class="container appear-animation" data-appear-animation="maskUp" data-appear-animation-delay="0" data-appear-animation-duration="1s">
+                    <div class="row py-4">
+                        <div class="col-sm-6 col-md-12 col-lg-4 mb-5 mb-lg-0">
+                            <h4 class="font-weight-normal mb-1"><strong class="font-weight-extra-bold">Honda KMG</strong> Manado</h4>
+                            <h5>PT. Kumala Motor Cemerlang</h5>
+                            <hr>
+                            <p class="m-0 text-color-light">JL. Raya Manado - Tomohon KM 7, Winangun Atas
+                                Pineleng, Minahasa, Sulawesi Utara
+                                95661</p>
+                        </div>
+                        <div class="col-sm-6 col-md-4 col-lg-3 mb-md-0">
+                            <h4 class="font-weight-normal mb-3"><strong class="font-weight-extra-bold">Hubungi</strong> Kami</h4>
+                            <ul class="list list-icons list-icons-lg">
+                                <li class="mb-1"><i class="fas fa-phone text-color-light"></i>
+                                    <p class="m-0"><a class="text-color-light" href="tel:0431821821">(0431) 821 821</a></p>
+                                </li>
+                                <li class="mb-1"><i class="fab fa-whatsapp text-color-light"></i>
+                                    <p class="m-0"><a class="text-color-light" href="https://api.whatsapp.com/send?phone=6281388217676">0813-8821-7676</a></p>
+                                </li>
+                                <li class="mb-1"><i class="far fa-envelope text-color-light"></i>
+                                    <p class="m-0"><a class="text-color-light" href="mailto:honda@honda-kmg.com">honda@honda-kmg.com</a></p>
+                                </li>
+                            </ul>
+                        </div>
+                        <div class="col-sm-6 col-md-4 col-lg-3 mb-md-0">
+                            <h4 class="font-weight-normal mb-3">Jam <strong class="font-weight-extra-bold">Operasional</strong></h4>
+                            <ul class="list list-icons list-icons-lg">
+                                <li class="mb-1"><i class="far fa-clock text-color-light"></i>
+                                    <p class="m-0 text-color-light">Senin - Jumat : 08.30 - 19.00</p>
+                                </li>
+                                <li class="mb-1"><i class="far fa-clock text-color-light"></i>
+                                    <p class="m-0 text-color-light">Sabtu : 08.30 - 17.00</p>
+                                </li>
+                                <li class="mb-1"><i class="far fa-clock text-color-light"></i>
+                                    <p class="m-0 text-color-light">Minggu : 11.00 - 16.00</p>
+                                </li>
+                            </ul>
+                        </div>
+                        <div class="col-sm-6 col-md-4 col-lg-2">
+                            <h4 class="font-weight-normal mb-3">Social <strong class="font-weight-extra-bold">Media</strong></h4>
+                            <ul class="social-icons">
+                                <li class="social-icons-facebook"><a href="https://www.facebook.com/HondaKumalaGroup" target="_blank" title="Facebook"><i class="fab fa-facebook-f"></i></a></li>
+                                <li class="social-icons-instagram"><a href="https://www.instagram.com/honda_kmg/?hl=en" target="_blank" title="Instagram"><i class="fab fa-instagram"></i></a></li>
+                                <li class="social-icons-youtube"><a href="https://www.youtube.com/channel/UC7R09sGLSsz-Ky1nQs1Qbiw" target="_blank" title="Youtube"><i class="fab fa-youtube"></i></a></li>
+                            </ul>
+                        </div>
                     </div>
                 </div>
-            </div>
-            <div class="footer-copyright bg-color-quaternary bg-color-scale-overlay bg-color-scale-overlay-1">
-                <div class="bg-color-scale-overlay-wrapper">
-                    <div class="container">
-                        <div class="row py-4">
-                            <div class="col-lg-1 d-flex align-items-center justify-content-center justify-content-lg-start mb-2 mb-lg-0">
-                                <a href="<?= base_url() ?>" class="logo pr-0 pr-lg-3">
-                                    <img class="opacity-8" alt="Honda" src="image/logo.png" height="33">
-                                </a>
-                            </div>
-                            <div class="col-lg-7 d-flex align-items-center justify-content-center justify-content-lg-start mb-4 mb-lg-0">
-                                <p class="text-color-light font-weight-bold">© Copyright 2020. IT Kumala Group.</p>
-                            </div>
-                            <div class="col-lg-4 d-flex align-items-center justify-content-center justify-content-lg-end">
-                                <nav id="sub-menu">
-                                    <ul>
-                                        <li class="border-0"><i class="fas fa-angle-right text-color-light"></i><a href="javascript:void(0)" class="ml-1 text-decoration-none text-color-light font-weight-bold"> FAQ's</a></li>
-                                        <li class="border-0"><i class="fas fa-angle-right text-color-light"></i><a href="javascript:void(0)" class="ml-1 text-decoration-none text-color-light font-weight-bold"> Hubungi Kami</a></li>
-                                    </ul>
-                                </nav>
+                <div class="footer-copyright bg-color-quaternary bg-color-scale-overlay bg-color-scale-overlay-1">
+                    <div class="bg-color-scale-overlay-wrapper">
+                        <div class="container">
+                            <div class="row py-4">
+                                <div class="col-lg-1 d-flex align-items-center justify-content-center justify-content-lg-start mb-2 mb-lg-0">
+                                    <a href="<?= base_url() ?>" class="logo pr-0 pr-lg-3">
+                                        <img class="opacity-8" alt="Honda" src="image/logo.png" height="33">
+                                    </a>
+                                </div>
+                                <div class="col-lg-7 d-flex align-items-center justify-content-center justify-content-lg-start mb-4 mb-lg-0">
+                                    <p class="text-color-light font-weight-bold">© Copyright 2020. IT Kumala Group.</p>
+                                </div>
+                                <div class="col-lg-4 d-flex align-items-center justify-content-center justify-content-lg-end">
+                                    <nav id="sub-menu">
+                                        <ul>
+                                            <li class="border-0"><i class="fas fa-angle-right text-color-light"></i><a href="javascript:void(0)" class="ml-1 text-decoration-none text-color-light font-weight-bold"> FAQ's</a></li>
+                                            <li class="border-0"><i class="fas fa-angle-right text-color-light"></i><a href="<?= base_url("hubungi") ?>" class="ml-1 text-decoration-none text-color-light font-weight-bold"> Hubungi Kami</a></li>
+                                        </ul>
+                                    </nav>
+                                </div>
                             </div>
                         </div>
                     </div>

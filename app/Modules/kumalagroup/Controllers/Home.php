@@ -34,21 +34,54 @@ class Home extends BaseController
 		$d['slider'] = json_decode(curl_get($this->api_server . 'slider' . '/honda'));
 		$data = json_decode(curl_get($this->api_server . 'otomotif/honda'));
 		$d['otomotif'] = array_slice($data->otomotif, 0, 5);
-		$data = json_decode(curl_get($this->api_server . 'berita'));
+		$data = []; //json_decode(curl_get($this->api_server . 'berita'));
 		$d['berita'] = array_slice($data, 0, 5);
-		$data = json_decode(curl_get($this->api_server . 'm_promo'));
-		$d['promo'] = array_slice($data, 0, 5);
 		$d['base_img'] = $this->base_img;
+		echo view("$this->base\index", $d);
+	}
+	public function tentang()
+	{
+		$this->_set_base($this->url);
+		$d['index'] = "";
+		$d['content'] =  $this->base . '\error\maintenance';
+		echo view("$this->base\index", $d);
+	}
+	public function hubungi()
+	{
+		$this->_set_base($this->url);
+		$d['index'] = "";
+		$d['content'] =  $this->base . '\error\maintenance';
 		echo view("$this->base\index", $d);
 	}
 	public function produk()
 	{
 		$this->_set_base($this->url);
 		$d['index'] = "produk";
-		$d['content'] =  "$this->base\pages\produk";
+		$d['content'] =  $this->base . '\pages\produk';
 		$data = json_decode(curl_get($this->api_server . 'otomotif/honda'));
 		$d['otomotif'] = $data->otomotif;
 		$d['base_img'] = $this->base_img;
+		echo view("$this->base\index", $d);
+	}
+	public function berita()
+	{
+		$this->_set_base($this->url);
+		$d['index'] = "produk";
+		$d['content'] =  $this->base . '\error\maintenance';
+		echo view("$this->base\index", $d);
+	}
+	public function promo()
+	{
+		$this->_set_base($this->url);
+		$d['index'] = "produk";
+		$d['content'] =  $this->base . '\error\maintenance';
+		echo view("$this->base\index", $d);
+	}
+	public function simulasi_harga()
+	{
+		$this->_set_base($this->url);
+		$d['index'] = "produk";
+		$d['content'] =  $this->base . '\error\maintenance';
 		echo view("$this->base\index", $d);
 	}
 }
