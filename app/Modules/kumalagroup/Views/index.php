@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html>
+<html class="side-panel">
 
 <head>
 
@@ -38,12 +38,6 @@
     <link rel="stylesheet" href="css/theme-blog.css">
     <link rel="stylesheet" href="css/theme-shop.css">
 
-    <!-- Current Page CSS -->
-    <link rel="stylesheet" href="vendor/rs-plugin/css/settings.css">
-    <link rel="stylesheet" href="vendor/rs-plugin/css/layers.css">
-    <link rel="stylesheet" href="vendor/rs-plugin/css/navigation.css">
-    <link rel="stylesheet" href="vendor/circle-flip-slideshow/css/component.css">
-
     <!-- Demo CSS -->
 
 
@@ -55,7 +49,9 @@
 
     <!-- Head Libs -->
     <script src="vendor/modernizr/modernizr.min.js"></script>
+
     <script src="vendor/jquery/jquery.min.js"></script>
+
 </head>
 
 <body class="loading-overlay-showing" data-loading-overlay data-plugin-options="{'hideDelay': 300}" data-plugin-page-transition>
@@ -137,7 +133,9 @@
         </header>
 
         <div role="main" class="main">
+
             <?= view("$content") ?>
+
         </div>
 
         <footer id="footer" class="section section-angeled bg-color-quaternary border-top-0 mt-0">
@@ -217,7 +215,6 @@
             </div>
         </footer>
     </div>
-    <a href="https://api.whatsapp.com/send?phone=6281388217676" id="whats" class="z-index-3" target="_blank"> <i class="fab fa-whatsapp whats"></i> </a>
 
     <!-- Vendor -->
     <script src="vendor/jquery.appear/jquery.appear.min.js"></script>
@@ -235,21 +232,40 @@
     <script src="vendor/magnific-popup/jquery.magnific-popup.min.js"></script>
     <script src="vendor/vide/jquery.vide.min.js"></script>
     <script src="vendor/vivus/vivus.min.js"></script>
+    <script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
 
     <!-- Theme Base, Components and Settings -->
     <script src="js/theme.js"></script>
 
     <!-- Current Page Vendor and Views -->
-    <script src="vendor/rs-plugin/js/jquery.themepunch.tools.min.js"></script>
-    <script src="vendor/rs-plugin/js/jquery.themepunch.revolution.min.js"></script>
-    <script src="vendor/circle-flip-slideshow/js/jquery.flipshow.min.js"></script>
-    <script src="js/views/view.home.js"></script>
+    <script src="js/views/view.contact.js"></script>
 
     <!-- Theme Custom -->
     <script src="js/custom.js"></script>
 
     <!-- Theme Initialization Files -->
     <script src="js/theme.init.js"></script>
+
+    <script>
+        function input_number(e) {
+            if ($.inArray(e.which, [187, 107, 8, 37, 39, 46, 190]) != -1) return;
+            else if ((e.which < 48 || e.which > 57) && (e.which < 96 || e.which > 105)) e.preventDefault();
+        }
+
+        /* Fungsi formatRupiah */
+        function formatRupiah(angka) {
+            var number_string = angka.replace(/[^,\d]/g, '').toString(),
+                split = number_string.split(','),
+                sisa = split[0].length % 3,
+                rupiah = split[0].substr(0, sisa),
+                ribuan = split[0].substr(sisa).match(/\d{3}/gi);
+            if (ribuan) {
+                separator = sisa ? '.' : '';
+                rupiah += separator + ribuan.join('.');
+            }
+            return rupiah;
+        }
+    </script>
 
     <script>
         (function(w, d, s, l, i) {
@@ -280,6 +296,7 @@
             s0.parentNode.insertBefore(s1, s0);
         })();
     </script>
+
 </body>
 
 </html>

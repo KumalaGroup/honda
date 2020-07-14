@@ -14,6 +14,7 @@ class Home extends BaseController
 		"http://portal3.kumalagroup.co.id/kmg/"
 	];
 	private $base_img = "https://kumalagroup.id/assets/img_marketing";
+	// private $base_img = "http://localhost:6424/kumalagroup/assets/img_marketing";
 	private $api_server;
 	function _set_base($url)
 	{
@@ -66,16 +67,23 @@ class Home extends BaseController
 	{
 		$this->_set_base($this->url);
 		$request = \Config\Services::request();
-		$d['index'] = "produk";
-		$d['content'] =  "$this->base\pages\produk";
-		$d['mode'] = "detail";
-		$model = $request->uri->getSegments()[0];
-		$data = json_decode(curl_get($this->api_server . "produk/$model"));
-		$d['warna'] = $data->warna;
-		$d['produk'] = $data->produk;
-		$d['detail'] = $data->detail;
-		$d['base_img'] = $this->base_img;
-		echo view("$this->base\index", $d);
+		$post =  $request->getPost();
+		if ($post) {
+			foreach ($post as $i => $v) $data[$i] = preg_replace('#<script(.*?)>(.*?)</script>#is', '', strip_tags($v));
+			$result = curl_post($this->api_server . 'layanan', $data);
+			echo $result;
+		} else {
+			$d['index'] = "produk";
+			$d['content'] =  "$this->base\pages\produk";
+			$d['mode'] = "detail";
+			$model = $request->uri->getSegments()[0];
+			$data = json_decode(curl_get($this->api_server . "produk/$model"));
+			$d['warna'] = $data->warna;
+			$d['produk'] = $data->produk;
+			$d['detail'] = $data->detail;
+			$d['base_img'] = $this->base_img;
+			echo view("$this->base\index", $d);
+		}
 	}
 	public function berita()
 	{

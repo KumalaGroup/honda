@@ -115,12 +115,18 @@
             </div>
             <div class="row text-center appear-animation" data-appear-animation="maskUp" data-appear-animation-delay="0" data-appear-animation-duration="1s">
                 <div class="col-sm-3 col-lg-2 mb-5 mb-sm-0 ml-auto">
-                    <a href="" class="text-quaternary text-hover-secondary text-decoration-none">
+                    <a href=" <?= base_url("hubungi") ?>" class="text-quaternary text-hover-secondary text-decoration-none">
                         <div class="mb-2"><i class="fas fa-phone text-8"></i></div>
                         <div class="opacity-9 text-4"><span class="font-weight-bold">Hubungi</span> Kami</div>
                     </a>
                 </div>
-                <div class="col-sm-4 col-lg-3 mb-5 mb-sm-0">
+                <div class="col-sm-3 col-lg-3 mb-5 mb-sm-0">
+                    <a href="javascript:void(0)" class="text-quaternary text-hover-secondary text-decoration-none side-panel-toggle" data-extra-class="side-panel">
+                        <div class="mb-2"><i class="fas fa-clipboard-list text-8"></i></div>
+                        <div class="opacity-9 text-4">Dapatkan <span class="font-weight-bold">Penawaran</span></div>
+                    </a>
+                </div>
+                <div class="col-sm-3 col-lg-3 mb-5 mb-sm-0">
                     <a download href="<?= "$base_img/otomotif/brosur/$produk->brosur" ?>" target="_blank" class="text-quaternary text-hover-secondary text-decoration-none">
                         <div class="mb-2"><i class="fas fa-book text-8"></i></div>
                         <div class="opacity-9 text-4">Download <span class="font-weight-bold">E-Brosur</span></div>
@@ -181,3 +187,65 @@
         });
     </script>
 <?php } ?>
+<div class="side-panel-wrapper" style="width: 350px;">
+    <button class="hamburguer-btn side-panel-close side-panel-toggle active" data-set-active="false">
+        <span class="close">
+            <span></span>
+            <span></span>
+        </span>
+    </button>
+    <aside class="sidebar">
+        <h5 class="font-weight-bold text-4 mt-4">Dapatkan penawaran dari kami!</h5>
+        <p>Silahkan lengkapi form dibawah ini.</p>
+        <form id="form">
+            <div class="form-row">
+                <div class="form-group col">
+                    <label class="required font-weight-bold text-dark text-1 mb-0">Jenis Layanan</label>
+                    <select id="layanan" name="layanan" data-msg-required="Silahkan pilih jenis layanan." class="form-control" required>
+                        <option value="" selected disabled>-- Silahkan pilih jenis layanan --</option>
+                        <option value="Test Drive">Test Drive</option>
+                        <option value="Penawaran">Penawaran</option>
+                    </select>
+                </div>
+            </div>
+            <div class="form-row">
+                <div class="form-group col">
+                    <label class="required font-weight-bold text-dark text-1 mb-0">Nama</label>
+                    <input type="text" name="nama" class="form-control" id="nama" data-msg-required="Silahkan masukkan nama anda." maxlength="100" required>
+                </div>
+            </div>
+            <div class="form-row">
+                <div class="form-group col">
+                    <label class="required font-weight-bold text-dark text-1 mb-0">No. Telepon</label>
+                    <input type="text" name="telepon" class="form-control" id="telepon" data-msg-required="Silahkan masukkan no. telepon anda." maxlength="100" onkeydown="input_number(event)" required>
+                </div>
+            </div>
+            <div class="form-row">
+                <div class="form-group col">
+                    <label class="required font-weight-bold text-dark text-1 mb-0">Kota Domisili</label>
+                    <input type="text" name="asalKota" class="form-control" id="asalKota" data-msg-required="Silahkan masukkan kota domisili anda." maxlength="100" required>
+                </div>
+            </div>
+
+            <div class="form-row mt-4">
+                <div class="form-group col">
+                    <button id="submit" class="btn btn-outline btn-rounded btn-secondary btn-with-arrow mb-2">Kirim Permintaan<span><i class="fas fa-chevron-right"></i></span></button>
+                </div>
+            </div>
+        </form>
+    </aside>
+</div>
+<script>
+    $('#submit').click(function() {
+        var form = $('#form');
+        if (form.valid()) {
+            var data = form.serialize();
+            $(this).prop('disabled', true);
+            $(this).html("Mengirim data...");
+            $.post(location, data, function(r) {
+                alert("Terima kasih, wiraniaga kami akan segera menghubungi anda!");
+                location.reload();
+            });
+        }
+    });
+</script>
