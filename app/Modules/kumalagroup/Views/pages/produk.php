@@ -121,7 +121,7 @@
                     </a>
                 </div>
                 <div class="col-sm-4 col-lg-3 mb-5 mb-sm-0">
-                    <a download="" href="https://kumalagroup.id/assets/img_marketing/otomotif/brosur/20200612062513.jpg" class="text-quaternary text-hover-secondary text-decoration-none">
+                    <a download="" href="<?= "$base_img/otomotif/warna/$produk->brosur" ?>" class="text-quaternary text-hover-secondary text-decoration-none">
                         <div class="mb-2"><i class="fas fa-book text-8"></i></div>
                         <div class="opacity-9 text-4">Download <span class="font-weight-bold">E-Brosur</span></div>
                     </a>
