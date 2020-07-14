@@ -215,6 +215,7 @@
             </div>
         </footer>
     </div>
+    <a href="https://api.whatsapp.com/send?phone=6281388217676" id="whats" class="z-index-3" target="_blank"> <i class="fab fa-whatsapp whats"></i> </a>
 
     <!-- Vendor -->
     <script src="vendor/jquery.appear/jquery.appear.min.js"></script>
