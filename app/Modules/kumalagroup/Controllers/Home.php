@@ -31,9 +31,8 @@ class Home extends BaseController
 		$this->_set_base($this->url);
 		$d['index'] = "home";
 		$d['content'] =  "$this->base\pages\beranda";
-		$d['slider'] = json_decode(curl_get($this->api_server . 'slider' . '/honda'));
-		$data = json_decode(curl_get($this->api_server . 'otomotif/honda'));
-		$d['otomotif'] = array_slice($data->otomotif, 0, 5);
+		$d['slider'] = json_decode(curl_get($this->api_server . 's_honda'));
+		$d['produk'] = json_decode(curl_get($this->api_server . 'produk/5'));
 		$data = []; //json_decode(curl_get($this->api_server . 'berita'));
 		$d['berita'] = array_slice($data, 0, 5);
 		$d['base_img'] = $this->base_img;
@@ -57,30 +56,44 @@ class Home extends BaseController
 	{
 		$this->_set_base($this->url);
 		$d['index'] = "produk";
+		$d['mode'] = "list";
 		$d['content'] =  $this->base . '\pages\produk';
-		$data = json_decode(curl_get($this->api_server . 'otomotif/honda'));
-		$d['otomotif'] = $data->otomotif;
+		$d['produk'] = json_decode(curl_get($this->api_server . 'produk'));
+		$d['base_img'] = $this->base_img;
+		echo view("$this->base\index", $d);
+	}
+	public function detail()
+	{
+		$this->_set_base($this->url);
+		$request = \Config\Services::request();
+		$d['index'] = "produk";
+		$d['content'] =  "$this->base\pages\produk";
+		$d['mode'] = "detail";
+		$model = $request->uri->getSegments()[0];
+		$data = json_decode(curl_get($this->api_server . "produk/$model"));
+		$d['warna'] = $data->warna;
+		$d['produk'] = $data->produk;
+		$d['detail'] = $data->detail;
 		$d['base_img'] = $this->base_img;
 		echo view("$this->base\index", $d);
 	}
 	public function berita()
 	{
 		$this->_set_base($this->url);
-		$d['index'] = "produk";
+		$d['index'] = "berita";
 		$d['content'] =  $this->base . '\error\maintenance';
 		echo view("$this->base\index", $d);
 	}
 	public function promo()
 	{
 		$this->_set_base($this->url);
-		$d['index'] = "produk";
+		$d['index'] = "promo";
 		$d['content'] =  $this->base . '\error\maintenance';
 		echo view("$this->base\index", $d);
 	}
 	public function simulasi_harga()
 	{
 		$this->_set_base($this->url);
-		$d['index'] = "produk";
 		$d['content'] =  $this->base . '\error\maintenance';
 		echo view("$this->base\index", $d);
 	}

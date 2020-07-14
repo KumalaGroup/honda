@@ -52,15 +52,15 @@
                         '979' : {'items': 3},
                         '1199': {'items': 3}
                     }}">
-                    <?php foreach ($otomotif as $v) { ?>
+                    <?php foreach ($produk as $v) { ?>
                         <div>
-                            <a href="<?= base_url("/detail/" . base64_encode($v->id)) ?>">
+                            <a href="<?= base_url(strtolower(implode("_", explode(" ", $v->nama_model)))) ?>">
                                 <div class="thumb-info thumb-info-no-borders thumb-info-no-borders-rounded thumb-info-lighten thumb-info-bottom-info thumb-info-hide-wrapper-bg">
                                     <div class="thumb-info-wrapper">
                                         <img src="<?= "$base_img/otomotif/$v->gambar" ?>" class="p-2" height="200" alt="" style="object-fit: contain;">
                                         <div class="thumb-info-title">
                                             <div class="thumb-info-inner text-center">
-                                                <h5 class="m-0 text-secondary font-weight-bold" style="font-size: 12pt;"><?= $v->model ?></h5>
+                                                <h5 class="m-0 text-secondary font-weight-bold" style="font-size: 12pt;"><?= $v->nama_model ?></h5>
                                                 <p class="m-0" style="font-size: 10pt;">Mulai dari <span class="text-secondary font-weight-bold">IDR <?= number_format($v->harga, 0, '', '.') ?></span></p>
                                             </div>
                                         </div>
@@ -102,7 +102,7 @@
 <section class="section section-angled section-angled-reverse bg-color-grey border-0">
     <div class="section-angled-layer-bottom bg-quaternary"></div>
     <div class="section-angled-content">
-        <div class="container">
+        <div class="container pb-5">
             <div class="row appear-animation" data-appear-animation="maskUp" data-appear-animation-delay="0" data-appear-animation-duration="1s">
                 <div class="col-md-12 text-center">
                     <h2 class="font-weight-normal text-7"><strong class="font-weight-extra-bold">Berita</strong> Terbaru</h2>

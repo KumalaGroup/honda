@@ -55,9 +55,10 @@
 
     <!-- Head Libs -->
     <script src="vendor/modernizr/modernizr.min.js"></script>
+    <script src="vendor/jquery/jquery.min.js"></script>
 </head>
 
-<body class="loading-overlay-showing" data-loading-overlay data-plugin-options="{'hideDelay': 300}">
+<body class="loading-overlay-showing" data-loading-overlay data-plugin-options="{'hideDelay': 300}" data-plugin-page-transition>
     <div class="loading-overlay">
         <div class="bounce-loader">
             <div class="bounce1"></div>
@@ -111,9 +112,6 @@
                                                 </li>
                                                 <li class="dropdown">
                                                     <a class="dropdown-item dropdown-toggle <?= $index != "promo" ?: "active" ?>" href="<?= base_url("promo") ?>">Promo</a>
-                                                </li>
-                                                <li class="dropdown">
-                                                    <a class="dropdown-item dropdown-toggle" href="javascript:void(0)">Simulasi Harga</a>
                                                 </li>
                                             </ul>
                                         </nav>
@@ -222,7 +220,6 @@
     <a href="https://api.whatsapp.com/send?phone=6281388217676" id="whats" class="z-index-3" target="_blank"> <i class="fab fa-whatsapp whats"></i> </a>
 
     <!-- Vendor -->
-    <script src="vendor/jquery/jquery.min.js"></script>
     <script src="vendor/jquery.appear/jquery.appear.min.js"></script>
     <script src="vendor/jquery.easing/jquery.easing.min.js"></script>
     <script src="vendor/jquery.cookie/jquery.cookie.min.js"></script>
