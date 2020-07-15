@@ -33,9 +33,8 @@ class Home extends BaseController
 		$d['index'] = "home";
 		$d['content'] =  "$this->base\pages\beranda";
 		$d['slider'] = json_decode(curl_get($this->api_server . 's_honda'));
-		$d['produk'] = json_decode(curl_get($this->api_server . 'produk/5'));
-		$data = []; //json_decode(curl_get($this->api_server . 'berita'));
-		$d['berita'] = array_slice($data, 0, 5);
+		$d['produk'] = json_decode(curl_get($this->api_server . 'p_honda/5'));
+		$d['berita'] = json_decode(curl_get($this->api_server . 'b_honda/5'));
 		$d['base_img'] = $this->base_img;
 		echo view("$this->base\index", $d);
 	}
@@ -59,7 +58,7 @@ class Home extends BaseController
 		$d['index'] = "produk";
 		$d['mode'] = "list";
 		$d['content'] =  $this->base . '\pages\produk';
-		$d['produk'] = json_decode(curl_get($this->api_server . 'produk'));
+		$d['produk'] = json_decode(curl_get($this->api_server . 'p_honda'));
 		$d['base_img'] = $this->base_img;
 		echo view("$this->base\index", $d);
 	}
@@ -73,14 +72,21 @@ class Home extends BaseController
 			$result = curl_post($this->api_server . 'layanan', $data);
 			echo $result;
 		} else {
-			$d['index'] = "produk";
-			$d['content'] =  "$this->base\pages\produk";
 			$d['mode'] = "detail";
-			$model = $request->uri->getSegments()[0];
-			$data = json_decode(curl_get($this->api_server . "produk/$model"));
-			$d['warna'] = $data->warna;
-			$d['produk'] = $data->produk;
-			$d['detail'] = $data->detail;
+			$key = substr($request->uri->getSegments()[0], 0, 30);
+			$data = json_decode(curl_get($this->api_server . "p_honda/$key"));
+			if (empty($data->produk)) {
+				$data = json_decode(curl_get($this->api_server . "b_honda/$key"));
+				$d['index'] = $data->type != "promo" ? "blog" : "promo";
+				$d['content'] =  "$this->base\pages\berita";
+				$d['berita'] = $data;
+			} else {
+				$d['index'] = "produk";
+				$d['content'] =  "$this->base\pages\produk";
+				$d['warna'] = $data->warna;
+				$d['produk'] = $data->produk;
+				$d['detail'] = $data->detail;
+			}
 			$d['base_img'] = $this->base_img;
 			echo view("$this->base\index", $d);
 		}
@@ -88,15 +94,20 @@ class Home extends BaseController
 	public function berita()
 	{
 		$this->_set_base($this->url);
-		$d['index'] = "berita";
-		$d['content'] =  $this->base . '\error\maintenance';
+		$d['index'] = "blog";
+		$d['content'] =  $this->base . '\pages\berita';
+		$d['mode'] = "list";
+		$d['berita'] = json_decode(curl_get($this->api_server . 'b_honda'));
+		$d['base_img'] = $this->base_img;
 		echo view("$this->base\index", $d);
 	}
 	public function promo()
 	{
 		$this->_set_base($this->url);
 		$d['index'] = "promo";
-		$d['content'] =  $this->base . '\error\maintenance';
+		$d['content'] =  $this->base . '\pages\promo';
+		$d['promo'] = json_decode(curl_get($this->api_server . 'pm_honda'));
+		$d['base_img'] = $this->base_img;
 		echo view("$this->base\index", $d);
 	}
 	public function simulasi_harga()

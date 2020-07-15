@@ -54,7 +54,7 @@
 
 </head>
 
-<body class="loading-overlay-showing" data-loading-overlay data-plugin-options="{'hideDelay': 300}" data-plugin-page-transition>
+<body class="loading-overlay-showing" data-loading-overlay data-plugin-options="{'hideDelay': 300}">
     <div class="loading-overlay">
         <div class="bounce-loader">
             <div class="bounce1"></div>
@@ -98,23 +98,23 @@
                                         <nav class="collapse">
                                             <ul class="nav nav-pills" id="mainNav">
                                                 <li class="dropdown">
-                                                    <a class="dropdown-item dropdown-toggle <?= $index != "home" ?: "active" ?>" href="<?= base_url() ?>">Beranda</a>
+                                                    <a class="dropdown-item <?= $index != "home" ?: "active" ?>" href="<?= base_url() ?>">Beranda</a>
                                                 </li>
                                                 <li class="dropdown">
-                                                    <a class="dropdown-item dropdown-toggle <?= $index != "produk" ?: "active" ?>" href="<?= base_url("produk") ?>">Produk</a>
+                                                    <a class="dropdown-item <?= $index != "produk" ?: "active" ?>" href="<?= base_url("produk") ?>">Produk</a>
                                                 </li>
                                                 <li class="dropdown">
-                                                    <a class="dropdown-item dropdown-toggle <?= $index != "berita" ?: "active" ?>" href="<?= base_url("berita") ?>">Berita</a>
+                                                    <a class="dropdown-item <?= $index != "blog" ?: "active" ?>" href="<?= base_url("blog") ?>">Blog</a>
                                                 </li>
                                                 <li class="dropdown">
-                                                    <a class="dropdown-item dropdown-toggle <?= $index != "promo" ?: "active" ?>" href="<?= base_url("promo") ?>">Promo</a>
+                                                    <a class="dropdown-item <?= $index != "promo" ?: "active" ?>" href="<?= base_url("promo") ?>">Promo</a>
                                                 </li>
                                             </ul>
                                         </nav>
                                     </div>
                                     <div class="header-nav-features">
                                         <div class="header-nav-feature header-nav-features-search d-inline-flex">
-                                            <ul class="social-icons">
+                                            <ul class="footer-social-icons social-icons social-icons-clean social-icons-icon-dark">
                                                 <li class="social-icons-facebook"><a href="https://www.facebook.com/HondaKumalaGroup" target="_blank" title="Facebook"><i class="fab fa-facebook-f"></i></a></li>
                                                 <li class="social-icons-instagram"><a href="https://www.instagram.com/honda_kmg/?hl=en" target="_blank" title="Instagram"><i class="fab fa-instagram"></i></a></li>
                                                 <li class="social-icons-youtube"><a href="https://www.youtube.com/channel/UC7R09sGLSsz-Ky1nQs1Qbiw" target="_blank" title="Youtube"><i class="fab fa-youtube"></i></a></li>
@@ -142,7 +142,7 @@
             <div class="section-angled-content">
                 <div class="container appear-animation" data-appear-animation="maskUp" data-appear-animation-delay="0" data-appear-animation-duration="1s">
                     <div class="row py-4">
-                        <div class="col-sm-6 col-md-12 col-lg-4 mb-5 mb-lg-0">
+                        <div class="col-sm-12 col-lg-4 mb-5 mb-lg-0 text-center text-lg-left">
                             <h4 class="font-weight-normal mb-1"><strong class="font-weight-extra-bold">Honda KMG</strong> Manado</h4>
                             <h5>PT. Kumala Motor Cemerlang</h5>
                             <hr>
@@ -150,7 +150,7 @@
                                 Pineleng, Minahasa, Sulawesi Utara
                                 95661</p>
                         </div>
-                        <div class="col-sm-6 col-md-4 col-lg-3 mb-md-0">
+                        <div class="col-6 col-md-4 col-lg-3 mb-md-0">
                             <h4 class="font-weight-normal mb-3"><strong class="font-weight-extra-bold">Hubungi</strong> Kami</h4>
                             <ul class="list list-icons list-icons-lg">
                                 <li class="mb-1"><i class="fas fa-phone text-color-light"></i>
@@ -164,7 +164,7 @@
                                 </li>
                             </ul>
                         </div>
-                        <div class="col-sm-6 col-md-4 col-lg-3 mb-md-0">
+                        <div class="col-6 col-md-4 col-lg-3 mb-md-0">
                             <h4 class="font-weight-normal mb-3">Jam <strong class="font-weight-extra-bold">Operasional</strong></h4>
                             <ul class="list list-icons list-icons-lg">
                                 <li class="mb-1"><i class="far fa-clock text-color-light"></i>
@@ -178,12 +178,12 @@
                                 </li>
                             </ul>
                         </div>
-                        <div class="col-sm-6 col-md-4 col-lg-2">
+                        <div class="col-sm-6 col-md-4 col-lg-2 mx-auto mx-md-0 text-center text-md-left">
                             <h4 class="font-weight-normal mb-3">Social <strong class="font-weight-extra-bold">Media</strong></h4>
-                            <ul class="social-icons">
-                                <li class="social-icons-facebook"><a href="https://www.facebook.com/HondaKumalaGroup" target="_blank" title="Facebook"><i class="fab fa-facebook-f"></i></a></li>
-                                <li class="social-icons-instagram"><a href="https://www.instagram.com/honda_kmg/?hl=en" target="_blank" title="Instagram"><i class="fab fa-instagram"></i></a></li>
-                                <li class="social-icons-youtube"><a href="https://www.youtube.com/channel/UC7R09sGLSsz-Ky1nQs1Qbiw" target="_blank" title="Youtube"><i class="fab fa-youtube"></i></a></li>
+                            <ul class="footer-social-icons social-icons social-icons-clean social-icons-icon-dark mb-3">
+                                <li class="social-icons-facebook"><a href="https://www.facebook.com/HondaKumalaGroup" target="_blank" title="Facebook"><i class="text-color-light fab fa-facebook-f"></i></a></li>
+                                <li class="social-icons-instagram"><a href="https://www.instagram.com/honda_kmg/?hl=en" target="_blank" title="Instagram"><i class="text-color-light fab fa-instagram"></i></a></li>
+                                <li class="social-icons-youtube"><a href="https://www.youtube.com/channel/UC7R09sGLSsz-Ky1nQs1Qbiw" target="_blank" title="Youtube"><i class="text-color-light fab fa-youtube"></i></a></li>
                             </ul>
                         </div>
                     </div>
