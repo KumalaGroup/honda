@@ -72,14 +72,18 @@ class Home extends BaseController
 			$result = curl_post($this->api_server . 'layanan', $data);
 			echo $result;
 		} else {
+			$breakout = false;
 			$d['mode'] = "detail";
 			$key = substr($request->uri->getSegments()[0], 0, 30);
 			$data = json_decode(curl_get($this->api_server . "p_honda/$key"));
 			if (empty($data->produk)) {
 				$data = json_decode(curl_get($this->api_server . "b_honda/$key"));
-				$d['index'] = $data->type != "promo" ? "blog" : "promo";
-				$d['content'] =  "$this->base\pages\berita";
-				$d['berita'] = $data;
+				if (empty($data)) $breakout = true;
+				else {
+					$d['index'] = $data->type != "promo" ? "blog" : "promo";
+					$d['content'] =  "$this->base\pages\berita";
+					$d['berita'] = $data;
+				}
 			} else {
 				$d['index'] = "produk";
 				$d['content'] =  "$this->base\pages\produk";
@@ -87,7 +91,12 @@ class Home extends BaseController
 				$d['produk'] = $data->produk;
 				$d['detail'] = $data->detail;
 			}
-			$d['base_img'] = $this->base_img;
+			if ($breakout) {
+				$d['index'] = "";
+				$d['content'] = $this->base . '\error\404.php';
+			} else {
+				$d['base_img'] = $this->base_img;
+			}
 			echo view("$this->base\index", $d);
 		}
 	}
