@@ -1,7 +1,7 @@
 <section class="section section-angled section-angled-reverse bg-light border-0">
     <div class="section-angled-layer-bottom bg-quaternary"></div>
     <div class="section-angled-content">
-        <div class="container" style="min-height: calc(100vh - 393px);">
+        <div class="container" style="min-height: calc(100vh - 500px);">
             <div class="row">
                 <div class="col text-center my-5">
                     <div class="overflow-hidden mb-2">
