@@ -80,7 +80,7 @@
     </div>
 </section>
 
-<section class="section section-text-light section-angled section-center border-top-0 parallax section-parallax m-0" data-plugin-parallax data-plugin-options="{'speed': 0}" data-image-src="image/about.jpg">
+<section class="section section-text-light section-angled section-center border-top-0 parallax section-parallax m-0" data-plugin-parallax data-plugin-options="{'speed': 0}" data-image-src="<?= base_url("image/about.jpg") ?>">
     <div class="section-angled-layer-bottom bg-color-grey"></div>
     <div class="section-angled-content">
         <div class="container py-4">

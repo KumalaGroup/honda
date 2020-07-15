@@ -14,8 +14,8 @@
     <meta name="author" content="it kumala group">
 
     <!-- Favicon -->
-    <link rel="shortcut icon" href="image/logo.png" type="image/x-icon" />
-    <link rel="apple-touch-icon" href="image/apple-touch-icon.png">
+    <link rel="shortcut icon" href="<?= base_url("image/logo.png") ?>" type="image/x-icon" />
+    <link rel="apple-touch-icon" href="img/apple-touch-icon.png">
 
     <!-- Mobile Metas -->
     <meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1.0, shrink-to-fit=no">
@@ -24,33 +24,33 @@
     <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,400,600,700,800%7CShadows+Into+Light" rel="stylesheet" type="text/css">
 
     <!-- Vendor CSS -->
-    <link rel="stylesheet" href="vendor/bootstrap/css/bootstrap.min.css">
-    <link rel="stylesheet" href="vendor/fontawesome-free/css/all.min.css">
-    <link rel="stylesheet" href="vendor/animate/animate.min.css">
-    <link rel="stylesheet" href="vendor/simple-line-icons/css/simple-line-icons.min.css">
-    <link rel="stylesheet" href="vendor/owl.carousel/assets/owl.carousel.min.css">
-    <link rel="stylesheet" href="vendor/owl.carousel/assets/owl.theme.default.min.css">
-    <link rel="stylesheet" href="vendor/magnific-popup/magnific-popup.min.css">
+    <link rel="stylesheet" href="<?= base_url() ?>/vendor/bootstrap/css/bootstrap.min.css">
+    <link rel="stylesheet" href="<?= base_url() ?>/vendor/fontawesome-free/css/all.min.css">
+    <link rel="stylesheet" href="<?= base_url() ?>/vendor/animate/animate.min.css">
+    <link rel="stylesheet" href="<?= base_url() ?>/vendor/simple-line-icons/css/simple-line-icons.min.css">
+    <link rel="stylesheet" href="<?= base_url() ?>/vendor/owl.carousel/assets/owl.carousel.min.css">
+    <link rel="stylesheet" href="<?= base_url() ?>/vendor/owl.carousel/assets/owl.theme.default.min.css">
+    <link rel="stylesheet" href="<?= base_url() ?>/vendor/magnific-popup/magnific-popup.min.css">
 
     <!-- Theme CSS -->
-    <link rel="stylesheet" href="css/theme.css">
-    <link rel="stylesheet" href="css/theme-elements.css">
-    <link rel="stylesheet" href="css/theme-blog.css">
-    <link rel="stylesheet" href="css/theme-shop.css">
+    <link rel="stylesheet" href="<?= base_url() ?>/css/theme.css">
+    <link rel="stylesheet" href="<?= base_url() ?>/css/theme-elements.css">
+    <link rel="stylesheet" href="<?= base_url() ?>/css/theme-blog.css">
+    <link rel="stylesheet" href="<?= base_url() ?>/css/theme-shop.css">
 
     <!-- Demo CSS -->
 
 
     <!-- Skin CSS -->
-    <link rel="stylesheet" href="css/skins/default.css">
+    <link rel="stylesheet" href="<?= base_url() ?>/css/skins/default.css">
 
     <!-- Theme Custom CSS -->
-    <link rel="stylesheet" href="css/custom.css">
+    <link rel="stylesheet" href="<?= base_url() ?>/css/custom.css">
 
     <!-- Head Libs -->
-    <script src="vendor/modernizr/modernizr.min.js"></script>
+    <script src="<?= base_url() ?>/vendor/modernizr/modernizr.min.js"></script>
 
-    <script src="vendor/jquery/jquery.min.js"></script>
+    <script src="<?= base_url() ?>/vendor/jquery/jquery.min.js"></script>
 
 </head>
 
@@ -71,7 +71,7 @@
                             <div class="header-row">
                                 <div class="header-logo">
                                     <a href="<?= base_url() ?>">
-                                        <img class="opacity-8" alt="Porto" width="auto" height="70" data-sticky-width="auto" data-sticky-height="40" data-sticky-top="35" src="image/logo.png">
+                                        <img class="opacity-8" alt="Porto" width="auto" height="70" data-sticky-width="auto" data-sticky-height="40" data-sticky-top="35" src="<?= base_url("image/logo.png") ?>">
                                     </a>
                                 </div>
                             </div>
@@ -194,7 +194,7 @@
                             <div class="row py-4">
                                 <div class="col-lg-1 d-flex align-items-center justify-content-center justify-content-lg-start mb-2 mb-lg-0">
                                     <a href="<?= base_url() ?>" class="logo pr-0 pr-lg-3">
-                                        <img class="opacity-8" alt="Honda" src="image/logo.png" height="33">
+                                        <img class="opacity-8" alt="Honda" src="<?= base_url("image/logo.png") ?>" height="33">
                                     </a>
                                 </div>
                                 <div class="col-lg-7 d-flex align-items-center justify-content-center justify-content-lg-start mb-4 mb-lg-0">
@@ -218,34 +218,34 @@
     <a href="https://api.whatsapp.com/send?phone=6281388217676" id="whats" class="z-index-3" target="_blank"> <i class="fab fa-whatsapp whats"></i> </a>
 
     <!-- Vendor -->
-    <script src="vendor/jquery.appear/jquery.appear.min.js"></script>
-    <script src="vendor/jquery.easing/jquery.easing.min.js"></script>
-    <script src="vendor/jquery.cookie/jquery.cookie.min.js"></script>
-    <script src="vendor/popper/umd/popper.min.js"></script>
-    <script src="vendor/bootstrap/js/bootstrap.min.js"></script>
-    <script src="vendor/common/common.min.js"></script>
-    <script src="vendor/jquery.validation/jquery.validate.min.js"></script>
-    <script src="vendor/jquery.easy-pie-chart/jquery.easypiechart.min.js"></script>
-    <script src="vendor/jquery.gmap/jquery.gmap.min.js"></script>
-    <script src="vendor/jquery.lazyload/jquery.lazyload.min.js"></script>
-    <script src="vendor/isotope/jquery.isotope.min.js"></script>
-    <script src="vendor/owl.carousel/owl.carousel.min.js"></script>
-    <script src="vendor/magnific-popup/jquery.magnific-popup.min.js"></script>
-    <script src="vendor/vide/jquery.vide.min.js"></script>
-    <script src="vendor/vivus/vivus.min.js"></script>
+    <script src="<?= base_url() ?>/vendor/jquery.appear/jquery.appear.min.js"></script>
+    <script src="<?= base_url() ?>/vendor/jquery.easing/jquery.easing.min.js"></script>
+    <script src="<?= base_url() ?>/vendor/jquery.cookie/jquery.cookie.min.js"></script>
+    <script src="<?= base_url() ?>/vendor/popper/umd/popper.min.js"></script>
+    <script src="<?= base_url() ?>/vendor/bootstrap/js/bootstrap.min.js"></script>
+    <script src="<?= base_url() ?>/vendor/common/common.min.js"></script>
+    <script src="<?= base_url() ?>/vendor/jquery.validation/jquery.validate.min.js"></script>
+    <script src="<?= base_url() ?>/vendor/jquery.easy-pie-chart/jquery.easypiechart.min.js"></script>
+    <script src="<?= base_url() ?>/vendor/jquery.gmap/jquery.gmap.min.js"></script>
+    <script src="<?= base_url() ?>/vendor/jquery.lazyload/jquery.lazyload.min.js"></script>
+    <script src="<?= base_url() ?>/vendor/isotope/jquery.isotope.min.js"></script>
+    <script src="<?= base_url() ?>/vendor/owl.carousel/owl.carousel.min.js"></script>
+    <script src="<?= base_url() ?>/vendor/magnific-popup/jquery.magnific-popup.min.js"></script>
+    <script src="<?= base_url() ?>/vendor/vide/jquery.vide.min.js"></script>
+    <script src="<?= base_url() ?>/vendor/vivus/vivus.min.js"></script>
     <script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
 
     <!-- Theme Base, Components and Settings -->
-    <script src="js/theme.js"></script>
+    <script src="<?= base_url() ?>/js/theme.js"></script>
 
     <!-- Current Page Vendor and Views -->
-    <script src="js/views/view.contact.js"></script>
+    <script src="<?= base_url() ?>/js/views/view.contact.js"></script>
 
     <!-- Theme Custom -->
-    <script src="js/custom.js"></script>
+    <script src="<?= base_url() ?>/js/custom.js"></script>
 
     <!-- Theme Initialization Files -->
-    <script src="js/theme.init.js"></script>
+    <script src="<?= base_url() ?>/js/theme.init.js"></script>
 
     <script>
         function input_number(e) {
