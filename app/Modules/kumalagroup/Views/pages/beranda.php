@@ -114,7 +114,7 @@
                         <div class="owl-carousel owl-theme dots-morphing mb-3" data-plugin-options="{ 
                     'items'     : 3,
                     'margin'    : 30,
-                    'loop'      : true,
+                    'loop'      : false,
                     'nav'       : false,
                     'dots'      : true,
                     'autoHeight': true,
