@@ -4,7 +4,7 @@
         <div class="container appear-animation" data-appear-animation="maskUp" data-appear-animation-delay="0" data-appear-animation-duration="1s">
             <div class="row">
                 <div class="col-md-12 align-self-center p-static order-2 text-center">
-                    <h1 data-title-border>404 - Page Not Found</h1>
+                    <h1 data-title-border>Error 404</h1>
                 </div>
             </div>
         </div>
