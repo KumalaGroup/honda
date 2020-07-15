@@ -76,22 +76,33 @@ class Home extends BaseController
 			if (isset($request->uri->getSegments()[1])) $breakout = true;
 			else {
 				$d['mode'] = "detail";
-				$key = substr($request->uri->getSegments()[0], 0, 30);
+				$key = $request->uri->getSegments()[0];
 				$data = json_decode(curl_get($this->api_server . "p_honda/$key"));
 				if (empty($data->produk)) {
 					$data = json_decode(curl_get($this->api_server . "b_honda/$key"));
 					if (empty($data)) $breakout = true;
 					else {
-						$d['index'] = $data->type != "promo" ? "blog" : "promo";
-						$d['content'] =  "$this->base\pages\berita";
-						$d['berita'] = $data;
+						$judul = strpos($data->judul, ",") ? str_replace(",", " ", $data->judul) : $data->judul;
+						$judul = strpos($judul, "(") ? str_replace("(", " ", $judul) : $judul;
+						$judul = strpos($judul, ")") ? str_replace(")", " ", $judul) : $judul;
+						$judul = strtolower(str_replace(" ", "_", $judul));
+						if ($judul != $key) $breakout = true;
+						else {
+							$d['index'] = $data->type != "promo" ? "blog" : "promo";
+							$d['content'] =  "$this->base\pages\berita";
+							$d['berita'] = $data;
+						}
 					}
 				} else {
-					$d['index'] = "produk";
-					$d['content'] =  "$this->base\pages\produk";
-					$d['warna'] = $data->warna;
-					$d['produk'] = $data->produk;
-					$d['detail'] = $data->detail;
+					$link = strtolower(str_replace(" ", "_", $data->produk->nama_model));
+					if ($link != $key) $breakout = true;
+					else {
+						$d['index'] = "produk";
+						$d['content'] =  "$this->base\pages\produk";
+						$d['warna'] = $data->warna;
+						$d['produk'] = $data->produk;
+						$d['detail'] = $data->detail;
+					}
 				}
 			}
 			if ($breakout) {
