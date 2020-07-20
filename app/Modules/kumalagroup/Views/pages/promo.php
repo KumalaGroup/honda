@@ -27,6 +27,7 @@
                         $judul = strpos($v->judul, ",") ? str_replace(",", " ", $v->judul) : $v->judul;
                         $judul = strpos($judul, "(") ? str_replace("(", " ", $judul) : $judul;
                         $judul = strpos($judul, ")") ? str_replace(")", " ", $judul) : $judul;
+                        $judul = strpos($judul, "?") ? str_replace("?", " ", $judul) : $judul;
                         $judul = str_replace(" ", "_", $judul) ?>
                         <div class="col-md-12 mb-5 appear-animation" data-appear-animation="maskUp" data-appear-animation-delay="0" data-appear-animation-duration="1s">
                             <article class="post post-medium">
