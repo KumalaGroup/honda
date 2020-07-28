@@ -86,6 +86,7 @@ class Home extends BaseController
 						$judul = strpos($judul, "(") ? str_replace("(", " ", $judul) : $judul;
 						$judul = strpos($judul, ")") ? str_replace(")", " ", $judul) : $judul;
 						$judul = strpos($judul, "?") ? str_replace("?", " ", $judul) : $judul;
+						$judul = strpos($judul, "!") ? str_replace("!", " ", $judul) : $judul;
 						$judul = strtolower(str_replace(" ", "_", $judul));
 						if ($judul != $key) $breakout = true;
 						else {

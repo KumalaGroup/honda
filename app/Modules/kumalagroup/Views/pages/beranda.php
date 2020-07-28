@@ -131,6 +131,7 @@
                                 $judul = strpos($judul, "(") ? str_replace("(", " ", $judul) : $judul;
                                 $judul = strpos($judul, ")") ? str_replace(")", " ", $judul) : $judul;
                                 $judul = strpos($judul, "?") ? str_replace("?", " ", $judul) : $judul;
+                                $judul = strpos($judul, "!") ? str_replace("!", " ", $judul) : $judul;
                                 $judul = str_replace(" ", "_", $judul) ?>
                                 <div>
                                     <div class="recent-posts">

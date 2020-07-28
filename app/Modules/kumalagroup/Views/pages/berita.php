@@ -38,6 +38,7 @@
                             $judul = strpos($judul, "(") ? str_replace("(", " ", $judul) : $judul;
                             $judul = strpos($judul, ")") ? str_replace(")", " ", $judul) : $judul;
                             $judul = strpos($judul, "?") ? str_replace("?", " ", $judul) : $judul;
+                            $judul = strpos($judul, "!") ? str_replace("!", " ", $judul) : $judul;
                             $judul = str_replace(" ", "_", $judul) ?>
                             <div class="col-md-6 col-lg-4 mb-5 isotope-item <?= $v->type ?>">
                                 <div class=" recent-posts">
