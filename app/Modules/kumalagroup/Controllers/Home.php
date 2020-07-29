@@ -8,13 +8,13 @@ class Home extends BaseController
 {
 	private $base = "App\Modules\kumalagroup\Views";
 	private $url = [
-		"http://localhost:6424/kmg/",
+		// "http://localhost:6424/kmg/",
 		"http://portal3.kumalagroup.co.id/kmg/",
 		"http://portal.kumalagroup.co.id/kmg/",
 		"http://portal2.kumalagroup.co.id/kmg/",
 	];
-	// private $base_img = "https://kumalagroup.id/assets/img_marketing";
-	private $base_img = "http://localhost:6424/kumalagroup/assets/img_marketing";
+	private $base_img = "https://kumalagroup.id/assets/img_marketing";
+	// private $base_img = "http://localhost:6424/kumalagroup/assets/img_marketing";
 	private $api_server;
 	function _set_base($url)
 	{
