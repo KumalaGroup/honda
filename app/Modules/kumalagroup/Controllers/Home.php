@@ -8,12 +8,13 @@ class Home extends BaseController
 {
 	private $base = "App\Modules\kumalagroup\Views";
 	private $url = [
+		"http://localhost:6424/kmg/",
 		"http://portal3.kumalagroup.co.id/kmg/",
 		"http://portal.kumalagroup.co.id/kmg/",
 		"http://portal2.kumalagroup.co.id/kmg/",
 	];
-	private $base_img = "https://kumalagroup.id/assets/img_marketing";
-	// private $base_img = "http://localhost:6424/kumalagroup/assets/img_marketing";
+	// private $base_img = "https://kumalagroup.id/assets/img_marketing";
+	private $base_img = "http://localhost:6424/kumalagroup/assets/img_marketing";
 	private $api_server;
 	function _set_base($url)
 	{
@@ -47,9 +48,17 @@ class Home extends BaseController
 	public function hubungi()
 	{
 		$this->_set_base($this->url);
-		$d['index'] = "";
-		$d['content'] =  $this->base . '\error\maintenance';
-		echo view("$this->base\index", $d);
+		$request = \Config\Services::request();
+		$post =  $request->getPost();
+		if ($post) {
+			foreach ($post as $i => $v) $data[$i] = preg_replace('#<script(.*?)>(.*?)</script>#is', '', strip_tags($v));
+			$result = curl_post($this->api_server . 'bantuan', $data);
+			echo $result;
+		} else {
+			$d['index'] = "";
+			$d['content'] =  $this->base . '\pages\hubungi';
+			echo view("$this->base\index", $d);
+		}
 	}
 	public function produk()
 	{

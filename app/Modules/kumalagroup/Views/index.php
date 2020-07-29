@@ -164,7 +164,7 @@
                                 95661</p>
                         </div>
                         <div class="col-6 col-md-4 col-lg-3 mb-md-0">
-                            <h4 class="font-weight-normal mb-3"><strong class="font-weight-extra-bold">Hubungi</strong> Kami</h4>
+                            <h4 class="font-weight-normal mb-3"><a href="<?= base_url("hubungi") ?>" class="text-color-light"><strong class="font-weight-extra-bold">Hubungi</strong> Kami</a></h4>
                             <ul class="list list-icons list-icons-lg">
                                 <li class="mb-1"><i class="fas fa-phone text-color-light"></i>
                                     <p class="m-0"><a class="text-color-light" href="tel:0431821821">(0431) 821 821</a></p>
