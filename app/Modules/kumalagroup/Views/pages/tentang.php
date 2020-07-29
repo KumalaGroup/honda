@@ -1,4 +1,4 @@
-<section class="section section-angled page-header page-header-modern page-header-background page-header-background-md parallax overlay overlay-color-dark overlay-show overlay-op-5 mt-0" data-plugin-parallax data-plugin-options="{'speed': 0}" data-image-src="<?= base_url("image/about.jpg") ?>">
+<section class="section section-angled page-header page-header-modern page-header-background page-header-background-md parallax overlay overlay-color-dark overlay-show overlay-op-5 mt-0 border-0" data-plugin-parallax data-plugin-options="{'speed': 0}" data-image-src="<?= base_url("image/about.jpg") ?>">
     <div class="section-angled-layer-bottom bg-light"></div>
     <div class="section-angled-content">
         <div class="container">
