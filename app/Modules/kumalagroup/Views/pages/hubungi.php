@@ -107,7 +107,7 @@
             $('#submit').html("Mengirim pesan...");
             $.post(location, data, function(r) {
                 alert("Terima kasih, wiraniaga kami akan segera menghubungi anda!");
-                // location.reload();
+                location.reload();
             });
         }
     });
