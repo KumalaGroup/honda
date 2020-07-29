@@ -122,6 +122,9 @@
                                                 <li class="dropdown">
                                                     <a class="dropdown-item <?= $index != "promo" ?: "active" ?>" href="<?= base_url("promo") ?>">Promo</a>
                                                 </li>
+                                                <li class="dropdown">
+                                                    <a class="dropdown-item side-panel-toggle" data-extra-class="side-panel" href="javascript:void(0)">Dapatkan Penawaran</a>
+                                                </li>
                                             </ul>
                                         </nav>
                                     </div>
@@ -227,6 +230,68 @@
                 </div>
             </div>
         </footer>
+        <div class="side-panel-wrapper" style="width: 350px;">
+            <button class="hamburguer-btn side-panel-close side-panel-toggle active" data-set-active="false">
+                <span class="close">
+                    <span></span>
+                    <span></span>
+                </span>
+            </button>
+            <aside class="sidebar">
+                <h5 class="font-weight-bold text-4 mt-4">Dapatkan penawaran dari kami!</h5>
+                <p>Silahkan lengkapi form dibawah ini.</p>
+                <form id="form">
+                    <div class="form-row">
+                        <div class="form-group col">
+                            <label class="required font-weight-bold text-dark text-1 mb-0">Jenis Layanan</label>
+                            <select id="layanan" name="layanan" data-msg-required="Silahkan pilih jenis layanan." class="form-control" required>
+                                <option value="" selected disabled>-- Silahkan pilih jenis layanan --</option>
+                                <option value="Test Drive">Test Drive</option>
+                                <option value="Penawaran">Penawaran</option>
+                            </select>
+                        </div>
+                    </div>
+                    <div class="form-row">
+                        <div class="form-group col">
+                            <label class="required font-weight-bold text-dark text-1 mb-0">Nama</label>
+                            <input type="text" name="nama" class="form-control" id="nama" data-msg-required="Silahkan masukkan nama anda." maxlength="100" required>
+                        </div>
+                    </div>
+                    <div class="form-row">
+                        <div class="form-group col">
+                            <label class="required font-weight-bold text-dark text-1 mb-0">No. Telepon</label>
+                            <input type="text" name="telepon" class="form-control" id="telepon" data-msg-required="Silahkan masukkan no. telepon anda." maxlength="100" onkeydown="input_number(event)" required>
+                        </div>
+                    </div>
+                    <div class="form-row">
+                        <div class="form-group col">
+                            <label class="required font-weight-bold text-dark text-1 mb-0">Kota Domisili</label>
+                            <input type="text" name="asalKota" class="form-control" id="asalKota" data-msg-required="Silahkan masukkan kota domisili anda." maxlength="100" required>
+                        </div>
+                    </div>
+
+                    <div class="form-row mt-4">
+                        <div class="form-group col">
+                            <button id="submit" class="btn btn-outline btn-rounded btn-secondary btn-with-arrow mb-2">Kirim Permintaan<span><i class="fas fa-chevron-right"></i></span></button>
+                        </div>
+                    </div>
+                </form>
+            </aside>
+        </div>
+        <script>
+            $('#submit').click(function() {
+                var form = $('#form');
+                if (form.valid()) {
+                    var data = form.serialize();
+                    $(this).prop('disabled', true);
+                    $(this).html("Mengirim data...");
+                    $.post(location, data, function(r) {
+                        alert("Terima kasih, wiraniaga kami akan segera menghubungi anda!");
+                        location.reload();
+                    });
+                }
+            });
+        </script>
     </div>
     <a href="https://api.whatsapp.com/send?phone=6281388217676" id="whats" class="z-index-3" target="_blank"> <i class="fab fa-whatsapp whats"></i> </a>
 
