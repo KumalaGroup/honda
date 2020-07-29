@@ -24,7 +24,7 @@
                 <div class="row">
                     <?php foreach ($produk as $v) { ?>
                         <div class="col-md-6 col-lg-4 mb-5 appear-animation" data-appear-animation="maskUp" data-appear-animation-delay="0" data-appear-animation-duration="1s">
-                            <a href="<?= base_url(strtolower(str_replace(" ", "_", $v->nama_model))) ?>">
+                            <a href="<?= base_url(strtolower(reformat_string($v->nama_model))) ?>">
                                 <div class="thumb-info thumb-info-no-borders thumb-info-no-borders-rounded thumb-info-lighten thumb-info-bottom-info thumb-info-hide-wrapper-bg thumb-info-bottom-info-show-more">
                                     <div class="thumb-info-wrapper">
                                         <div style="height: 250px;">

@@ -32,3 +32,12 @@ function debug()
     echo '</pre>';
     die();
 }
+function reformat_string($data)
+{
+    $judul = strpos($data, ",") ? str_replace(",", " ", $data) : $data;
+    $judul = strpos($judul, "(") ? str_replace("(", " ", $judul) : $judul;
+    $judul = strpos($judul, ")") ? str_replace(")", " ", $judul) : $judul;
+    $judul = strpos($judul, "?") ? str_replace("?", " ", $judul) : $judul;
+    $judul = strpos($judul, "!") ? str_replace("!", " ", $judul) : $judul;
+    return str_replace(" ", "_", $judul);
+}

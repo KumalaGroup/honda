@@ -54,7 +54,7 @@
                     }}">
                     <?php foreach ($produk as $v) { ?>
                         <div>
-                            <a href="<?= base_url(strtolower(implode("_", explode(" ", $v->nama_model)))) ?>">
+                            <a href="<?= base_url(strtolower(reformat_string($v->nama_model))) ?>">
                                 <div class="thumb-info thumb-info-no-borders thumb-info-no-borders-rounded thumb-info-lighten thumb-info-bottom-info thumb-info-hide-wrapper-bg">
                                     <div class="thumb-info-wrapper">
                                         <img src="<?= "$base_img/otomotif/$v->gambar" ?>" class="p-2" height="200" alt="" style="object-fit: contain;">
@@ -126,18 +126,12 @@
                         '1199': {'items': 3}
                     }}">
                             <?php foreach ($berita as $v) {
-                                $date = new DateTime($v->updated_at);
-                                $judul = strpos($v->judul, ",") ? str_replace(",", " ", $v->judul) : $v->judul;
-                                $judul = strpos($judul, "(") ? str_replace("(", " ", $judul) : $judul;
-                                $judul = strpos($judul, ")") ? str_replace(")", " ", $judul) : $judul;
-                                $judul = strpos($judul, "?") ? str_replace("?", " ", $judul) : $judul;
-                                $judul = strpos($judul, "!") ? str_replace("!", " ", $judul) : $judul;
-                                $judul = str_replace(" ", "_", $judul) ?>
+                                $date = new DateTime($v->updated_at) ?>
                                 <div>
                                     <div class="recent-posts">
                                         <article class="post">
                                             <div class="post-image pb-3">
-                                                <a href="<?= base_url(strtolower(implode("_", explode(" ", $judul)))) ?>">
+                                                <a href="<?= base_url(strtolower(reformat_string($v->judul))) ?>">
                                                     <img src="<?= "$base_img/berita/$v->gambar" ?>" class="img-fluid img-thumbnail img-thumbnail-no-borders rounded-0" alt="" />
                                                 </a>
                                             </div>
@@ -145,12 +139,12 @@
                                                 <span class="day"><?= $date->format('d') ?></span>
                                                 <span class="month"><?= $date->format('M') ?></span>
                                             </div>
-                                            <h4><a href="<?= base_url(strtolower(implode("_", explode(" ", $judul)))) ?>" class="text-decoration-none"><?= $v->judul ?></a></h4>
+                                            <h4><a href="<?= base_url(strtolower(reformat_string($v->judul))) ?>" class="text-decoration-none"><?= $v->judul ?></a></h4>
                                             <div class="post-meta">
                                                 <span><i class="far fa-user"></i> By <a href="javascript:void(0)">Admin</a> </span>
                                                 <span><i class="far fa-folder"></i> <a href="<?= base_url("blog#$v->type") ?>"><?= ucwords($v->type) ?></a></span>
                                             </div>
-                                            <p class="m-0"><?= substr(strip_tags($v->deskripsi), 0, 150) ?>... <a href="<?= base_url(strtolower(implode("_", explode(" ", $judul)))) ?>" class="read-more font-weight-bold text-2">Baca selengkapnya <i class="fas fa-chevron-right text-1 ml-1"></i></a></p>
+                                            <p class="m-0"><?= substr(strip_tags($v->deskripsi), 0, 150) ?>... <a href="<?= base_url(strtolower(reformat_string($v->judul))) ?>" class="read-more font-weight-bold text-2">Baca selengkapnya <i class="fas fa-chevron-right text-1 ml-1"></i></a></p>
                                         </article>
                                     </div>
                                 </div>

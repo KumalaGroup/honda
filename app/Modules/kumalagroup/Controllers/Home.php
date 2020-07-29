@@ -41,7 +41,7 @@ class Home extends BaseController
 	{
 		$this->_set_base($this->url);
 		$d['index'] = "";
-		$d['content'] =  $this->base . '\error\maintenance';
+		$d['content'] =  $this->base . '\pages\tentang';
 		echo view("$this->base\index", $d);
 	}
 	public function hubungi()
@@ -81,12 +81,7 @@ class Home extends BaseController
 					$data = json_decode(curl_get($this->api_server . "b_honda/$key"));
 					if (empty($data)) $breakout = true;
 					else {
-						$judul = strpos($data->judul, ",") ? str_replace(",", " ", $data->judul) : $data->judul;
-						$judul = strpos($judul, "(") ? str_replace("(", " ", $judul) : $judul;
-						$judul = strpos($judul, ")") ? str_replace(")", " ", $judul) : $judul;
-						$judul = strpos($judul, "?") ? str_replace("?", " ", $judul) : $judul;
-						$judul = strpos($judul, "!") ? str_replace("!", " ", $judul) : $judul;
-						$judul = strtolower(str_replace(" ", "_", $judul));
+						$judul = strtolower(reformat_string($data->judul));
 						if ($judul != $key) $breakout = true;
 						else {
 							$d['index'] = $data->type != "promo" ? "blog" : "promo";
