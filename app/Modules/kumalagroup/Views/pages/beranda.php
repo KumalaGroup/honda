@@ -132,7 +132,7 @@
                                         <article class="post">
                                             <div class="post-image pb-3">
                                                 <a href="<?= base_url(strtolower(reformat_string($v->judul))) ?>">
-                                                    <img src="<?= "$base_img/berita/$v->gambar" ?>" class="img-fluid img-thumbnail img-thumbnail-no-borders rounded-0" alt="" />
+                                                    <img src="<?= empty($v->thumb) ? "$base_img/berita/$v->gambar" : "$base_img/berita/thumb/$v->thumb" ?>" class="img-fluid img-thumbnail img-thumbnail-no-borders rounded-0" alt="" />
                                                 </a>
                                             </div>
                                             <div class="post-date">
