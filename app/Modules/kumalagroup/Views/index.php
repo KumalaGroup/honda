@@ -269,7 +269,7 @@
                             <input type="text" name="asalKota" class="form-control" id="asalKota" data-msg-required="Silahkan masukkan kota domisili anda." maxlength="100" required>
                         </div>
                     </div>
-
+                    <input type="hidden" name="unit" value="<?= $produk->id ?? 0 ?>">
                     <div class="form-row mt-4">
                         <div class="form-group col">
                             <button id="submit" class="btn btn-outline btn-rounded btn-secondary btn-with-arrow mb-2">Kirim Permintaan<span><i class="fas fa-chevron-right"></i></span></button>
