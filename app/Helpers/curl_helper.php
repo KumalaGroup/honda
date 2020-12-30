@@ -39,5 +39,5 @@ function reformat_string($data)
     $judul = strpos($judul, ")") ? str_replace(")", " ", $judul) : $judul;
     $judul = strpos($judul, "?") ? str_replace("?", " ", $judul) : $judul;
     $judul = strpos($judul, "!") ? str_replace("!", " ", $judul) : $judul;
-    return str_replace(" ", "_", $judul);
+    return str_replace(" ", "-", $judul);
 }

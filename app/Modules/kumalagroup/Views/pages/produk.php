@@ -75,6 +75,8 @@
                         <h2 class="opacity-9 text-8 mb-2"><strong><?= $produk->nama_model ?></strong></h2>
                         <h3 class="opacity-9 text-6"><small>Mulai dari </small><span class="text-secondary font-weight-bold">IDR <?= number_format($produk->harga, 0, '', '.') ?>*</span></h3>
                         <p class="lead"><?= $produk->deskripsi ?></p>
+
+                        <a class="btn btn-outline btn-xl btn-rounded btn-secondary btn-with-arrow mt-2" href="<?= base_url(strtolower(reformat_string($produk->nama_model)) . '/explore-360#interior') ?>">Explore 360&deg;<span><i class="fas fa-chevron-right"></i></span></a>
                     </div>
                     <div class="col-md-10 col-lg-7 mx-auto text-center">
                         <div class="owl-carousel owl-theme nav-inside nav-style-1 nav-light m-0 appear-animation" data-appear-animation="maskUp" data-appear-animation-delay="0" data-appear-animation-duration="1s" data-plugin-options="{
