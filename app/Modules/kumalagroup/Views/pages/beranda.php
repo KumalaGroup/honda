@@ -126,7 +126,7 @@
                         '1199': {'items': 3}
                     }}">
                             <?php foreach ($berita as $v) {
-                                $date = new DateTime($v->updated_at) ?>
+                                $date = new DateTime($v->created_at) ?>
                                 <div>
                                     <div class="recent-posts">
                                         <article class="post">

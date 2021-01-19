@@ -33,7 +33,7 @@
                 <?php if ($berita) { ?>
                     <div class="row sort-destination appear-animation" data-appear-animation="maskUp" data-appear-animation-delay="0" data-appear-animation-duration="1s" data-sort-id="portfolio">
                         <?php foreach ($berita as $v) {
-                            $date = new DateTime($v->updated_at) ?>
+                            $date = new DateTime($v->created_at) ?>
                             <div class="col-md-6 col-lg-4 mb-5 isotope-item <?= $v->type ?>">
                                 <div class=" recent-posts">
                                     <article class="post">
@@ -99,7 +99,7 @@
                                         <img src="<?= "$base_img/berita/$berita->gambar" ?>" class="img-fluid img-thumbnail img-thumbnail-no-borders rounded-0  w-100" alt="" />
                                     </a>
                                 </div>
-                                <?php $date = new DateTime($berita->updated_at) ?>
+                                <?php $date = new DateTime($berita->created_at) ?>
                                 <div class="post-date ml-0">
                                     <span class="day"><?= $date->format('d') ?></span>
                                     <span class="month"><?= $date->format('M') ?></span>

@@ -23,7 +23,7 @@
             <?php if ($promo) { ?>
                 <div class="row">
                     <?php foreach ($promo as $v) {
-                        $date = new DateTime($v->updated_at) ?>
+                        $date = new DateTime($v->created_at) ?>
                         <div class="col-md-12 mb-5 appear-animation" data-appear-animation="maskUp" data-appear-animation-delay="0" data-appear-animation-duration="1s">
                             <article class="post post-medium">
                                 <div class="row">
